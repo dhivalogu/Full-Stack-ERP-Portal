@@ -1,0 +1,19 @@
+<div class="centre">
+    <div class="left">
+        <img class="bgimg" [src] ="logo" >
+    </div>
+    <div class="right">
+        <h1>Login</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>Customer ID</mat-label>
+            <input matInput [(ngModel)]="user_id" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [(ngModel)]="password" >
+        </mat-form-field>
+        <p></p>
+        <button  (click)='signin()' class="btn" style="background-color: rgb(29, 135, 255);">LOGIN</button>
+    </div>
+</div>
