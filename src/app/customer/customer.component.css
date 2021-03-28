@@ -1,0 +1,53 @@
+.container
+{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    padding:0px;
+    
+}
+.left
+{
+    width: 5vw;
+    height: 100vh;
+    position: fixed;
+    padding:0px;
+    background-color: rgb(0, 132, 255);
+    
+}
+.right
+{
+    width: 95vw;
+    background-color: rgb(255, 255, 255);
+}
+.nav
+{
+   height: 100vh;
+   background-color: rgb(0, 132, 255);
+   color: white;
+   padding-top: 100px;
+   font-weight: lighter;
+}
+p
+{
+    font-size: 50px;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: black;
+}
+a:focus
+{
+    color: black;
+}
+img{
+    background-color: rgb(0, 132, 255);
+    max-width: 100%;
+}
+ul{
+    border-top: 60px;
+}

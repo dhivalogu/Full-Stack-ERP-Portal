@@ -28,7 +28,8 @@ export class CustomerLoginComponent implements OnInit {
     {
       console.log(auth);
       this.login.push(auth);
-      this.auth1=this.login[0].Flag;
+      console.log(this.login);
+      this.auth1=this.login[0].FLAG;
       console.log(this.auth1);
       if(this.auth1=='2')
       {

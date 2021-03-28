@@ -17,7 +17,7 @@ import {CustomerUploadComponent} from './customer/customer-upload/customer-uploa
 import { CustomerInvoiceComponent } from './customer/customer-finance/customer-invoice/customer-invoice.component';
 import { CustomerSalesDataComponent } from './customer/customer-finance/customer-sales-data/customer-sales-data.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent
@@ -28,7 +28,7 @@ import {HttpClient} from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule,HttpClient
+    ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

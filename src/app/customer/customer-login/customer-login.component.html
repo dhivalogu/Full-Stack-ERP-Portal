@@ -13,7 +13,7 @@
             <mat-label>Password</mat-label>
             <input type="password" matInput [(ngModel)]="password" >
         </mat-form-field>
-        <p></p>
+        <p>{{this.error}}</p>
         <button  (click)='signin()' class="btn" style="background-color: rgb(29, 135, 255);">LOGIN</button>
     </div>
 </div>

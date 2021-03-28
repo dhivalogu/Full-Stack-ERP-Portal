@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<div class="container">
+    <div class="left">
+    <nav class="navbar navbar-default navbar-fixed-side">
+      <img [src]='logo' height="48px">
+      <ul class="nav flex-column">
+        <li routerLinkActive="active"><a routerLink="/home/profile"><mat-icon>perm_identity</mat-icon>Profile</a></li>
+        <li routerLinkActive="active"><a routerLink="/home/inquiry"><mat-icon>question_answer</mat-icon>Inquiry</a></li>
+        <li routerLinkActive="active"><a routerLink="/home/sales"><mat-icon>request_page</mat-icon>Sales Order</a></li>
+        <li routerLinkActive="active"><a routerLink="/home/delivery"><mat-icon>departure_board</mat-icon>Delivery</a></li>
+        <li routerLinkActive="active"><a routerLink="/home/finance"><mat-icon>attach_money</mat-icon>Financial Sheet</a></li>
+        <li><a routerLink="/"><mat-icon>power_settings_new</mat-icon></a></li>
+      </ul>
+    </nav>
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>
