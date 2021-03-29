@@ -15,7 +15,7 @@ export class CustomerDebitComponent implements OnInit {
   url1:string='';
   info:string='';
   auth1:string='';
-  login:any=[];
+  rdata:any=[];
   dataSource:any=[];
   display:boolean=true;
   constructor(private router:Router,private http:HttpClient) { }
@@ -31,16 +31,16 @@ export class CustomerDebitComponent implements OnInit {
     this.url1=('http://localhost:3200/debit?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {
-      this.login.push(auth);
-      for(var i=0;i<this.login[0].length;i++)
+      this.rdata.push(auth);
+      for(var i=0;i<this.rdata[0].length;i++)
       {
-      this.login[0][i].GJAHR=this.login[0][i].GJAHR[0];
-      this.login[0][i].AUGBL=this.login[0][i].AUGBL[0];
-      this.login[0][i].AUGDT=this.login[0][i].AUGDT[0];
-      this.login[0][i].PSWSL=this.login[0][i].PSWSL[0];
-      this.login[0][i].PSWBT=this.login[0][i].PSWBT[0];
+      this.rdata[0][i].GJAHR=this.rdata[0][i].GJAHR[0];
+      this.rdata[0][i].AUGBL=this.rdata[0][i].AUGBL[0];
+      this.rdata[0][i].AUGDT=this.rdata[0][i].AUGDT[0];
+      this.rdata[0][i].PSWSL=this.rdata[0][i].PSWSL[0];
+      this.rdata[0][i].PSWBT=this.rdata[0][i].PSWBT[0];
      }
-      this.dataSource = this.login[0];
+      this.dataSource = this.rdata[0];
       this.display=!this.display
     });   
   }

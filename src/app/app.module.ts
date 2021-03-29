@@ -19,9 +19,10 @@ import { CustomerSalesDataComponent } from './customer/customer-finance/customer
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { Spinner1Component } from './shared/spinner1/spinner1.component';
+import { CustomerAgingComponent } from './customer/customer-finance/customer-aging/customer-aging.component';
 @NgModule({
   declarations: [
-    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component
+    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent
   ],
   imports: [
     BrowserModule,

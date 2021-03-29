@@ -15,7 +15,7 @@ export class CustomerDeliveryComponent implements OnInit {
   url1:string='';
   info:string='';
   auth1:string='';
-  login:any=[];
+  rdata:any=[];
   dataSource:any=[];
   display:boolean=true;
   constructor(private router:Router,private http:HttpClient) { }
@@ -31,20 +31,20 @@ export class CustomerDeliveryComponent implements OnInit {
     this.url1=('http://localhost:3200/delivery?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {
-      this.login.push(auth);
-      for(var i=0;i<this.login[0].length;i++)
+      this.rdata.push(auth);
+      for(var i=0;i<this.rdata[0].length;i++)
       {
-      this.login[0][i].VBELN=this.login[0][i].VBELN[0];
-      this.login[0][i].ERZET=this.login[0][i].ERZET[0];
-      this.login[0][i].ERDAT=this.login[0][i].ERDAT[0];
-      this.login[0][i].VKORG=this.login[0][i].VKORG[0];
-      this.login[0][i].LFART=this.login[0][i].LFART[0];
-      this.login[0][i].INCO2=this.login[0][i].INCO2[0];
-      this.login[0][i].LFUHR=this.login[0][i].LFUHR[0];
-      this.login[0][i].ARKTX=this.login[0][i].ARKTX[0];
-      this.login[0][i].LFDAT_V=this.login[0][i].LFDAT_V[0];
+      this.rdata[0][i].VBELN=this.rdata[0][i].VBELN[0];
+      this.rdata[0][i].ERZET=this.rdata[0][i].ERZET[0];
+      this.rdata[0][i].ERDAT=this.rdata[0][i].ERDAT[0];
+      this.rdata[0][i].VKORG=this.rdata[0][i].VKORG[0];
+      this.rdata[0][i].LFART=this.rdata[0][i].LFART[0];
+      this.rdata[0][i].INCO2=this.rdata[0][i].INCO2[0];
+      this.rdata[0][i].LFUHR=this.rdata[0][i].LFUHR[0];
+      this.rdata[0][i].ARKTX=this.rdata[0][i].ARKTX[0];
+      this.rdata[0][i].LFDAT_V=this.rdata[0][i].LFDAT_V[0];
      }
-      this.dataSource = this.login[0];
+      this.dataSource = this.rdata[0];
       this.display=!this.display
     });   
   }

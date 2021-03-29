@@ -15,7 +15,7 @@ export class CustomerInquiryComponent implements OnInit {
   url1:string='';
   info:string='';
   auth1:string='';
-  login:any=[];
+  rdata:any=[];
   dataSource:any=[];
   display:boolean=true;
   constructor(private router:Router,private http:HttpClient) { }
@@ -32,19 +32,19 @@ export class CustomerInquiryComponent implements OnInit {
     this.http.get(this.url1).subscribe((auth) =>
     {
       console.log(auth);
-      this.login.push(auth);
-      for(var i=0;i<this.login[0].length;i++)
+      this.rdata.push(auth);
+      for(var i=0;i<this.rdata[0].length;i++)
       {
-      this.login[0][i].DOC_NUMBER=this.login[0][i].DOC_NUMBER[0];
-      this.login[0][i].ITM_NUMBER=this.login[0][i].ITM_NUMBER[0];
-      this.login[0][i].MATERIAL=this.login[0][i].MATERIAL[0];
-      this.login[0][i].SHORT_TEXT=this.login[0][i].SHORT_TEXT[0];
-      this.login[0][i].CREAT_DATE=this.login[0][i].CREAT_DATE[0];
-      this.login[0][i].REQ_QTY=this.login[0][i].REQ_QTY[0];
-      this.login[0][i].NET_PRICE=this.login[0][i].NET_PRICE[0];
-      this.login[0][i].CURRENCY=this.login[0][i].CURRENCY[0];
+      this.rdata[0][i].DOC_NUMBER=this.rdata[0][i].DOC_NUMBER[0];
+      this.rdata[0][i].ITM_NUMBER=this.rdata[0][i].ITM_NUMBER[0];
+      this.rdata[0][i].MATERIAL=this.rdata[0][i].MATERIAL[0];
+      this.rdata[0][i].SHORT_TEXT=this.rdata[0][i].SHORT_TEXT[0];
+      this.rdata[0][i].CREAT_DATE=this.rdata[0][i].CREAT_DATE[0];
+      this.rdata[0][i].REQ_QTY=this.rdata[0][i].REQ_QTY[0];
+      this.rdata[0][i].NET_PRICE=this.rdata[0][i].NET_PRICE[0];
+      this.rdata[0][i].CURRENCY=this.rdata[0][i].CURRENCY[0];
      }
-      this.dataSource = this.login[0];
+      this.dataSource = this.rdata[0];
       this.display=!this.display
     });   
   }

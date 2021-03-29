@@ -12,6 +12,7 @@ import {CustomerCreditComponent} from './customer/customer-finance/customer-cred
 import {CustomerUploadComponent} from './customer/customer-upload/customer-upload.component';
 import { CustomerInvoiceComponent } from './customer/customer-finance/customer-invoice/customer-invoice.component';
 import { CustomerSalesDataComponent } from './customer/customer-finance/customer-sales-data/customer-sales-data.component';
+import { CustomerAgingComponent } from './customer/customer-finance/customer-aging/customer-aging.component';
 const routes: Routes = [
 
   { path: '', component: CustomerLoginComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
       {path: 'finance', component: CustomerFinanceComponent,children :[
         {path: 'debit', component: CustomerDebitComponent},
         {path: 'credit', component: CustomerCreditComponent},
+        {path: 'aging', component: CustomerAgingComponent},
         {path: 'invoice', component: CustomerInvoiceComponent},
         {path: 'salesdata', component: CustomerSalesDataComponent},
       ]}
