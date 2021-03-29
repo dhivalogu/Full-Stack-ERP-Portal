@@ -8,7 +8,8 @@
         <li routerLinkActive="active"><a routerLink="/home/sales"><mat-icon>request_page</mat-icon>Sales Order</a></li>
         <li routerLinkActive="active"><a routerLink="/home/delivery"><mat-icon>departure_board</mat-icon>Delivery</a></li>
         <li routerLinkActive="active"><a routerLink="/home/finance"><mat-icon>attach_money</mat-icon>Financial Sheet</a></li>
-        <li><a routerLink="/"><mat-icon>power_settings_new</mat-icon></a></li>
+        <li routerLinkActive="active"><a routerLink="/home/finance"><mat-icon>cloud_upload</mat-icon>Master Data Upload</a></li>
+        <li><a (click)='logout()'><mat-icon>power_settings_new</mat-icon></a></li>
       </ul>
     </nav>
     </div>

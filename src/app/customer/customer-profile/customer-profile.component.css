@@ -5,18 +5,24 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
-    width: 75%;
+    width: 65%;
     height:85%;
     border-radius: 25px;
     display: flex;
-    flex-direction: row;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-items: center;
     justify-content: center;
   }
+  .cen
+  {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+  }
   .container
   {
-    background-image: linear-gradient(rgb(50, 98, 255), rgb(0, 132, 255));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(133, 196, 255));
       width: 100vw;
       height: 100vh;
   }
@@ -44,6 +50,7 @@
   {
       color: white;
       transition: width 2s;
+     
   }
   .btn:hover{
       background-color: green;

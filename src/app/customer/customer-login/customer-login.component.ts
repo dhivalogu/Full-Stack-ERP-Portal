@@ -20,10 +20,14 @@ export class CustomerLoginComponent implements OnInit {
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
+    if (localStorage.getItem("id") !== null) {
+      this.router.navigate(['home']);
+    }
   }
   signin():void
   {
     this.url1=('http://localhost:3200/login?user_id='+this.user_id+'&password='+this.password);
+    localStorage.setItem("id", this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {
       console.log(auth);
