@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     <soapenv:Header/>
     <soapenv:Body>
        <urn:ZBAPI_INQUIRY_GETDETAILS_DL>
-          <CUSTOMER_ID>2000000016</CUSTOMER_ID>
+          <CUSTOMER_ID>${user_id}</CUSTOMER_ID>
           <IT_FINAL>
           </IT_FINAL>
        </urn:ZBAPI_INQUIRY_GETDETAILS_DL>

@@ -1,4 +1,9 @@
-<div class="tab">
+<div *ngIf="display"class="spin">
+    <app-spinner1></app-spinner1>
+    <p>{{this.info}}</p>
+</div>
+
+<div *ngIf="!display" class="tab">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <ng-container matColumnDef="DOC_NUMBER">

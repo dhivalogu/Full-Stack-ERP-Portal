@@ -12,26 +12,18 @@ import {MatTableModule} from '@angular/material/table';
 export class CustomerInquiryComponent implements OnInit {
   displayedColumns: string[] = ['DOC_NUMBER', 'ITM_NUMBER','MATERIAL','CREAT_DATE','SHORT_TEXT','REQ_QTY','CURRENCY','NET_PRICE'];
   user_id:string='';
-  password:string='';
   url1:string='';
   info:string='';
   auth1:string='';
   login:any=[];
-  fname:string='';
-  lname:string='';
-  country:string='';
-  city:string='';
-  postal:string='';
-  region:string='';
-  street:string='';
-  address:string='';
-  mobile:string='';
-  editable:boolean=false;
   dataSource:any=[];
-  
+  display:boolean=true;
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
+    setTimeout(()=>{                           
+      this.info = 'No Inquiry Details Found For This Customer ID!';
+ }, 3000);
     if (localStorage.getItem("id") === null) {
       this.router.navigate(['']);
     }
@@ -41,7 +33,6 @@ export class CustomerInquiryComponent implements OnInit {
     {
       console.log(auth);
       this.login.push(auth);
-      console.log(this.login);
       for(var i=0;i<this.login[0].length;i++)
       {
       this.login[0][i].DOC_NUMBER=this.login[0][i].DOC_NUMBER[0];
@@ -53,8 +44,8 @@ export class CustomerInquiryComponent implements OnInit {
       this.login[0][i].NET_PRICE=this.login[0][i].NET_PRICE[0];
       this.login[0][i].CURRENCY=this.login[0][i].CURRENCY[0];
      }
-      console.log(this.login[0]);
       this.dataSource = this.login[0];
+      this.display=!this.display
     });   
   }
 
