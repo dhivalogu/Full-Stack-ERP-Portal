@@ -19,6 +19,8 @@ const debit = require("./routes/debit");
 app.use("/debit", debit);
 const aging = require("./routes/aging"); 
 app.use("/aging", aging);
+const update = require("./routes/update"); 
+app.use("/update", update);
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })	

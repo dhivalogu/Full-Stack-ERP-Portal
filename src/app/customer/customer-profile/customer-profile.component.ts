@@ -59,7 +59,13 @@ export class CustomerProfileComponent implements OnInit {
     this.info="";
   }
   update():void{
-    this.editable=false;
+    
+    this.url1=('http://localhost:3200/update?user_id='+this.user_id+'&fname='+this.fname+'&lname='+this.lname+'&country='+this.country+'&city='+this.city+'&postal='+this.postal+'&region='+this.region+'&street='+this.street+'&mobile='+this.mobile+'&address='+this.address);
+    this.http.get(this.url1).subscribe((auth) =>
+    {
+      console.log(auth);
+    });
     this.info="Updated Successfully";
+    this.editable=false;
   }
 }

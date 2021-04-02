@@ -6,15 +6,27 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./customer-upload.component.css']
 })
 export class CustomerUploadComponent implements OnInit {
-  file?:File
-  constructor(private http:HttpClient) { }
+  uploadedFiles: Array < File > ;
+  file:File;
+  constructor(private http:HttpClient) {
+    
+   }
   ngOnInit(): void {
+    
   }
-  upload()
-  {
-    console.log("hi");
-    this.http.get('http://localhost:3000/upload?file='+this.file).subscribe((response) => {
-      console.log('response received is ', response);
- });
-  }
+  fileChange(element:any) {
+    this.uploadedFiles = element.target.files;
 }
+
+upload() {
+  /*let formData = new FormData();
+  for (var i = 0; i < this.uploadedFiles.length; i++) {
+      formData.append("uploads[]", this.uploadedFiles[i], this.uploadedFiles[i].name);
+  }*/
+  this.http.post('http://localhost:3000/upload',this.file)
+      .subscribe((response) => {
+          console.log('response received is ', response);
+      })
+}
+  }
+
