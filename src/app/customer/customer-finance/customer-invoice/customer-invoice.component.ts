@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-invoice.component.css']
 })
 export class CustomerInvoiceComponent implements OnInit {
-
+  video:string='assets/videos/irpa.mp4';
   constructor() { }
 
   ngOnInit(): void {
