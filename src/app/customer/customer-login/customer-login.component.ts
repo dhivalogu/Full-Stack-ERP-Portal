@@ -21,7 +21,7 @@ export class CustomerLoginComponent implements OnInit {
 
   ngOnInit(): void {
     if (localStorage.getItem("id") !== null) {
-      this.router.navigate(['home']);
+      this.router.navigate(['customer']);
     }
   }
   signin():void
@@ -37,7 +37,7 @@ export class CustomerLoginComponent implements OnInit {
       console.log(this.auth1);
       if(this.auth1=='2')
       {
-        this.router.navigate(['home']);
+        this.router.navigate(['customer']);
       }
       else if(auth=='1')
       {

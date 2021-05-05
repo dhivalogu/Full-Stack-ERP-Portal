@@ -23,7 +23,7 @@ export class CustomerCreditComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{                           
       this.info = 'No Credit Memo Found For This Customer ID!';
- }, 3000);
+ }, 4000);
     if (localStorage.getItem("id") === null) {
       this.router.navigate(['']);
     }

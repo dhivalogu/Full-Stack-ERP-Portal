@@ -1,0 +1,45 @@
+<div *ngIf="display"class="spin">
+    <app-spinner1></app-spinner1>
+    <p>{{this.info}}</p>
+</div>
+<div *ngIf="!display" class="tab">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="GJAHR">
+          <th mat-header-cell *matHeaderCellDef> Fiscal Year </th>
+          <td mat-cell *matCellDef="let element"> {{element.GJAHR}} </td>
+        </ng-container>
+        <ng-container matColumnDef="BUKRS">
+            <th mat-header-cell *matHeaderCellDef> Sales Organization</th>
+            <td mat-cell *matCellDef="let element"> {{element.BUKRS}} </td>
+        </ng-container>
+        <ng-container matColumnDef="BELNR">
+            <th mat-header-cell *matHeaderCellDef>Document No.</th>
+            <td mat-cell *matCellDef="let element"> {{element.BELNR}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ZFBDT">
+            <th mat-header-cell *matHeaderCellDef>Baseline Date</th>
+            <td mat-cell *matCellDef="let element"> {{element.ZFBDT}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="PSWBT">
+            <th mat-header-cell *matHeaderCellDef> Amount</th>
+            <td mat-cell *matCellDef="let element"> {{element.PSWBT}} </td>
+        </ng-container>
+        <ng-container matColumnDef="PSWSL">
+            <th mat-header-cell *matHeaderCellDef> Currency</th>
+            <td mat-cell *matCellDef="let element"> {{element.PSWSL}} </td>
+        </ng-container>
+        
+
+        <ng-container matColumnDef="LFUHR">
+            <th mat-header-cell *matHeaderCellDef> Delivery Time</th>
+            <td mat-cell *matCellDef="let element"> {{element.LFUHR}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
+</div>

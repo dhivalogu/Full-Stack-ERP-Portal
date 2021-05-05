@@ -20,9 +20,22 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { Spinner1Component } from './shared/spinner1/spinner1.component';
 import { CustomerAgingComponent } from './customer/customer-finance/customer-aging/customer-aging.component';
+import {VendorLoginComponent} from './vendor/vendor-login/vendor-login.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { VendorRfqComponent } from './vendor/vendor-rfq/vendor-rfq.component';
+import { VendorPurchaseOrderComponent } from './vendor/vendor-purchase-order/vendor-purchase-order.component';
+import { VendorGoodsReceiptComponent } from './vendor/vendor-goods-receipt/vendor-goods-receipt.component';
+import { VendorFinanceComponent } from './vendor/vendor-finance/vendor-finance.component';
+import { VendorCreditComponent } from './vendor/vendor-finance/vendor-credit/vendor-credit.component';
+import { VendorDebitComponent } from './vendor/vendor-finance/vendor-debit/vendor-debit.component';
+import { VendorInvoiceComponent } from './vendor/vendor-finance/vendor-invoice/vendor-invoice.component';
+import { VendorProfileComponent } from './vendor/vendor-profile/vendor-profile.component';
+import { VendorAgingComponent } from './vendor/vendor-finance/vendor-aging/vendor-aging.component';
+import { NgxPaginationModule} from  'ngx-pagination';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 @NgModule({
   declarations: [
-    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent
+    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent, VendorLoginComponent, VendorComponent, VendorRfqComponent, VendorPurchaseOrderComponent, VendorGoodsReceiptComponent, VendorFinanceComponent, VendorCreditComponent, VendorDebitComponent, VendorInvoiceComponent, VendorProfileComponent, VendorAgingComponent, LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +43,7 @@ import { CustomerAgingComponent } from './customer/customer-finance/customer-agi
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule,HttpClientModule
+    ReactiveFormsModule,HttpClientModule,NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

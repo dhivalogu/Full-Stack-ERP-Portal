@@ -13,10 +13,22 @@ import {CustomerUploadComponent} from './customer/customer-upload/customer-uploa
 import { CustomerInvoiceComponent } from './customer/customer-finance/customer-invoice/customer-invoice.component';
 import { CustomerSalesDataComponent } from './customer/customer-finance/customer-sales-data/customer-sales-data.component';
 import { CustomerAgingComponent } from './customer/customer-finance/customer-aging/customer-aging.component';
+import {VendorLoginComponent} from './vendor/vendor-login/vendor-login.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { VendorRfqComponent } from './vendor/vendor-rfq/vendor-rfq.component';
+import { VendorPurchaseOrderComponent } from './vendor/vendor-purchase-order/vendor-purchase-order.component';
+import { VendorGoodsReceiptComponent } from './vendor/vendor-goods-receipt/vendor-goods-receipt.component';
+import { VendorFinanceComponent } from './vendor/vendor-finance/vendor-finance.component';
+import { VendorCreditComponent } from './vendor/vendor-finance/vendor-credit/vendor-credit.component';
+import { VendorDebitComponent } from './vendor/vendor-finance/vendor-debit/vendor-debit.component';
+import { VendorInvoiceComponent } from './vendor/vendor-finance/vendor-invoice/vendor-invoice.component';
+import { VendorProfileComponent } from './vendor/vendor-profile/vendor-profile.component';
+import { VendorAgingComponent } from './vendor/vendor-finance/vendor-aging/vendor-aging.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
-
-  { path: '', component: CustomerLoginComponent },
-  { path: 'home', component: CustomerComponent ,children :[
+  { path: '', component: LandingPageComponent },
+  { path: 'clogin', component: CustomerLoginComponent },
+  { path: 'customer', component: CustomerComponent ,children :[
       {path: 'profile', component: CustomerProfileComponent},
       {path: 'inquiry', component: CustomerInquiryComponent},
       {path: 'sales', component: CustomerSalesComponent},
@@ -30,7 +42,21 @@ const routes: Routes = [
         {path: 'salesdata', component: CustomerSalesDataComponent},
       ]}
 
-  ] }
+  ] },
+  { path: 'vlogin', component: VendorLoginComponent },
+  { path: 'vendor', component: VendorComponent,children :[
+    {path: 'profile', component: VendorProfileComponent},
+    {path: 'quotation', component: VendorRfqComponent},
+    {path: 'purchaseorder', component: VendorPurchaseOrderComponent},
+    {path: 'goods', component: VendorGoodsReceiptComponent},
+    {path: 'finance', component: VendorFinanceComponent,children :[
+      {path: 'debit', component: VendorDebitComponent},
+      {path: 'credit', component: VendorCreditComponent},
+      {path: 'aging', component: VendorAgingComponent},
+      {path: 'invoice', component: VendorInvoiceComponent},
+    ]}
+
+]}
 
 
 ];

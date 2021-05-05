@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="left">
+    <nav class="navbar navbar-default navbar-fixed-side">
+      <img [src]='logo' height="48px">
+      <ul class="nav flex-column">
+        <li routerLinkActive="active"><a routerLink="/vendor/profile"><mat-icon>perm_identity</mat-icon>Profile</a></li>
+        <li routerLinkActive="active"><a routerLink="/vendor/quotation"><mat-icon>question_answer</mat-icon>Quotation</a></li>
+        <li routerLinkActive="active"><a routerLink="/vendor/purchaseorder"><mat-icon>request_page</mat-icon>Purchase Order</a></li>
+        <li routerLinkActive="active"><a routerLink="/vendor/goods"><mat-icon>departure_board</mat-icon>Goods Receipt</a></li>
+        <li routerLinkActive="active"><a routerLink="/vendor/finance"><mat-icon>attach_money</mat-icon>Financial Sheet</a></li>
+        <li><a (click)='logout()'><mat-icon>power_settings_new</mat-icon></a></li>
+      </ul>
+    </nav>
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>
