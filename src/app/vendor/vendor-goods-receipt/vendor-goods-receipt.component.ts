@@ -22,12 +22,12 @@ export class VendorGoodsReceiptComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(()=>{                           
-      this.info = 'No Quotation Details Found For This Customer ID!';
+      this.info = 'No Goods Receipt Details Found For This Customer ID!';
  }, 4000);
-    if (localStorage.getItem("id") === null) {
+    if (localStorage.getItem("vid") === null) {
       this.router.navigate(['']);
     }
-    this.user_id= localStorage.getItem('id')!;
+    this.user_id= localStorage.getItem('vid')!;
     this.url1=('http://localhost:3200/vendor/goods?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {

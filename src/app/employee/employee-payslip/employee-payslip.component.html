@@ -1,0 +1,12 @@
+<div *ngIf="display"class="spin">
+    <app-spinner1></app-spinner1>
+    <p>{{this.info}}</p>
+</div>
+<div *ngIf="!display" id="divName" >
+    <img class="bgimg" [src] ="logo" >
+    <button  class="printbtn" [printStyle]="{button : {'display': 'none'},img : {'height': '100px'}}"printSectionId="divName" ngxPrint><mat-icon>print</mat-icon></button>
+    <div [innerHTML]="html">
+
+    </div>
+</div>
+ 

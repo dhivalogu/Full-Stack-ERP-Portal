@@ -7,8 +7,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import {MatPaginatorModule} from '@angular/material/paginator';
 const MaterialComponents = [
-  MatButtonModule,MatFormFieldModule,MatInputModule,MatSidenavModule,MatListModule,MatIconModule,MatTableModule,MatCarouselModule
+  MatButtonModule,MatFormFieldModule,MatInputModule,MatSidenavModule,MatListModule,MatIconModule,MatTableModule,MatCarouselModule,MatPaginatorModule
 ];
 @NgModule({
   imports: [MaterialComponents],

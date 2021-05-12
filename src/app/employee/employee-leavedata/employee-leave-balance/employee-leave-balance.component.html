@@ -1,0 +1,66 @@
+
+<div *ngIf="display"class="spin">
+    <app-spinner1></app-spinner1>
+    <p>{{this.info}}</p>
+</div>
+
+<div *ngIf="!display" id="divName" class="tab">
+    <button  class="printbtn" [printStyle]="{button : {'display': 'none'},img : {'height': '100px'}}"printSectionId="divName" ngxPrint><mat-icon>print</mat-icon></button>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="QUOTATYPE">
+          <th mat-header-cell *matHeaderCellDef> Quota Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.QUOTATYPE}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="QUOTABEG">
+            <th mat-header-cell *matHeaderCellDef>Quota Beginning</th>
+            <td mat-cell *matCellDef="let element"> {{element.QUOTABEG}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="QUOTAEND">
+            <th mat-header-cell *matHeaderCellDef> Quota End</th>
+            <td mat-cell *matCellDef="let element"> {{element.QUOTAEND}} </td>
+        </ng-container>
+        <ng-container matColumnDef="QUOTATEXT">
+            <th mat-header-cell *matHeaderCellDef> Leave Descriptio</th>
+            <td mat-cell *matCellDef="let element"> {{element.QUOTATEXT}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ENTITLE">
+            <th mat-header-cell *matHeaderCellDef> Allowed</th>
+            <td mat-cell *matCellDef="let element"> {{element.ENTITLE}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="DEDUCT">
+            <th mat-header-cell *matHeaderCellDef> Used</th>
+            <td mat-cell *matCellDef="let element"> {{element.DEDUCT}} </td>
+        </ng-container>
+        <ng-container matColumnDef="QUOTANUM">
+            <th mat-header-cell *matHeaderCellDef> Remaining</th>
+            <td mat-cell *matCellDef="let element"> {{element.QUOTANUM}} </td>
+        </ng-container>
+        <ng-container matColumnDef="TIME_UNIT">
+            <th mat-header-cell *matHeaderCellDef>Max Per Request</th>
+            <td mat-cell *matCellDef="let element"> {{element.TIME_UNIT}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ABSENCEHOURS">
+            <th mat-header-cell *matHeaderCellDef> Absence Hours</th>
+            <td mat-cell *matCellDef="let element"> {{element.ABSENCEHOURS}} </td>
+        </ng-container>
+        <ng-container matColumnDef="TIUNITEXT">
+            <th mat-header-cell *matHeaderCellDef> Time Unit</th>
+            <td mat-cell *matCellDef="let element"> {{element.TIUNITEXT}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ORDERED">
+            <th mat-header-cell *matHeaderCellDef> Requested</th>
+            <td mat-cell *matCellDef="let element"> {{element.ORDERED}} </td>
+        </ng-container>
+
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
+</div>

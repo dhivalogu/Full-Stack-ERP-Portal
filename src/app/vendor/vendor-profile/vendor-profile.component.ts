@@ -30,10 +30,10 @@ export class VendorProfileComponent implements OnInit {
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem("id") === null) {
+    if (localStorage.getItem("vid") === null) {
       this.router.navigate(['']);
     }
-    this.user_id= localStorage.getItem('id')!;
+    this.user_id= localStorage.getItem('vid')!;
     this.url1=('http://localhost:3200/vendor/details');
     this.http.post(this.url1,{user_id:this.user_id}).subscribe((auth) =>
     {

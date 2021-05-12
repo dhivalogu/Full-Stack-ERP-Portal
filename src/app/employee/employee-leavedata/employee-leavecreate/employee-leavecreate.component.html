@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="centre">
+        <div class="cen">
+            <h1>Apply Leave</h1>
+            <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Starting Date</mat-label>
+            <input matInput [(ngModel)]="START_DATE">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Ending Date</mat-label>
+            <input matInput [(ngModel)]="LAST_DATE" >
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>Leave Type</mat-label>
+            <input matInput [(ngModel)]="LEAVE_TYPE" >
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>Total Hours</mat-label>
+            <input matInput [(ngModel)]="HOURS" >
+        </mat-form-field><br>
+        
+        <button  (click)='update()' class="btn" style="background-color: rgb(58, 173, 110);">Apply</button>
+        
+        <p style="color: rgb(58, 173, 110);">{{this.info}}</p>
+    </div>
+</div>
+</div>

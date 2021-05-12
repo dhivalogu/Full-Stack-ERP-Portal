@@ -25,6 +25,14 @@ import { VendorInvoiceComponent } from './vendor/vendor-finance/vendor-invoice/v
 import { VendorProfileComponent } from './vendor/vendor-profile/vendor-profile.component';
 import { VendorAgingComponent } from './vendor/vendor-finance/vendor-aging/vendor-aging.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
+import { EmployeeLeavedataComponent } from './employee/employee-leavedata/employee-leavedata.component';
+import { EmployeePayslipComponent } from './employee/employee-payslip/employee-payslip.component';
+import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
+import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/employee-leavecreate/employee-leavecreate.component';
+import { EmployeeLeaveComponent } from './employee/employee-leavedata/employee-leave/employee-leave.component';
+import { EmployeeLeaveBalanceComponent } from './employee/employee-leavedata/employee-leave-balance/employee-leave-balance.component';
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'clogin', component: CustomerLoginComponent },
@@ -56,7 +64,20 @@ const routes: Routes = [
       {path: 'invoice', component: VendorInvoiceComponent},
     ]}
 
-]}
+]},
+{ path: 'elogin', component: EmployeeLoginComponent },
+{ path: 'employee', component: EmployeeComponent ,children :[
+    {path: 'profile', component: EmployeeProfileComponent},
+    {path: 'leave', component: EmployeeLeavedataComponent ,children :[
+      {path: 'data', component: EmployeeLeaveComponent},
+      {path: 'balance', component: EmployeeLeaveBalanceComponent},
+      {path: 'request', component: EmployeeLeavecreateComponent}
+  
+  ]},
+    {path: 'applyleave', component: EmployeeLeavecreateComponent},
+    {path: 'payslip', component: EmployeePayslipComponent}
+
+] },
 
 
 ];

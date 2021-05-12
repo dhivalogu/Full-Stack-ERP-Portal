@@ -10,7 +10,7 @@ export class VendorComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-    //this.router.navigate(['customer/profile']);
+    this.router.navigate(['vendor/profile']);
   }
   
   logout():void

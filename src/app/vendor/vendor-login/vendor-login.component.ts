@@ -20,14 +20,14 @@ export class VendorLoginComponent implements OnInit {
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem("id") !== null) {
-      this.router.navigate(['home']);
+    if (localStorage.getItem("vid") !== null) {
+      this.router.navigate(['vendor']);
     }
   }
   signin():void
   {
     this.url1=('http://localhost:3200/vendor/login/');
-    localStorage.setItem("id", this.user_id);
+    localStorage.setItem("vid", this.user_id);
     this.http.post(this.url1,{user_id:this.user_id,password:this.password}).subscribe((auth) =>
     {
       console.log(auth);

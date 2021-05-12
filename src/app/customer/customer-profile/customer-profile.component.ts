@@ -30,10 +30,10 @@ export class CustomerProfileComponent implements OnInit {
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem("id") === null) {
+    if (localStorage.getItem("cid") === null) {
       this.router.navigate(['']);
     }
-    this.user_id= localStorage.getItem('id')!;
+    this.user_id= localStorage.getItem('cid')!;
     this.url1=('http://localhost:3200/login?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {

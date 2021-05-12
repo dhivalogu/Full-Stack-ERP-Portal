@@ -33,9 +33,18 @@ import { VendorProfileComponent } from './vendor/vendor-profile/vendor-profile.c
 import { VendorAgingComponent } from './vendor/vendor-finance/vendor-aging/vendor-aging.component';
 import { NgxPaginationModule} from  'ngx-pagination';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
+import { EmployeeLeavedataComponent } from './employee/employee-leavedata/employee-leavedata.component';
+import { EmployeePayslipComponent } from './employee/employee-payslip/employee-payslip.component';
+import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
+import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/employee-leavecreate/employee-leavecreate.component';
+import {NgxPrintModule} from 'ngx-print';
+import { EmployeeLeaveComponent } from './employee/employee-leavedata/employee-leave/employee-leave.component';
+import { EmployeeLeaveBalanceComponent } from './employee/employee-leavedata/employee-leave-balance/employee-leave-balance.component';
 @NgModule({
   declarations: [
-    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent, VendorLoginComponent, VendorComponent, VendorRfqComponent, VendorPurchaseOrderComponent, VendorGoodsReceiptComponent, VendorFinanceComponent, VendorCreditComponent, VendorDebitComponent, VendorInvoiceComponent, VendorProfileComponent, VendorAgingComponent, LandingPageComponent
+    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent, VendorLoginComponent, VendorComponent, VendorRfqComponent, VendorPurchaseOrderComponent, VendorGoodsReceiptComponent, VendorFinanceComponent, VendorCreditComponent, VendorDebitComponent, VendorInvoiceComponent, VendorProfileComponent, VendorAgingComponent, LandingPageComponent, EmployeeComponent, EmployeeProfileComponent, EmployeeLeavedataComponent, EmployeePayslipComponent, EmployeeLoginComponent, EmployeeLeavecreateComponent, EmployeeLeaveComponent, EmployeeLeaveBalanceComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule,HttpClientModule,NgxPaginationModule
+    ReactiveFormsModule,HttpClientModule,NgxPaginationModule,NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]

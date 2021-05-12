@@ -22,12 +22,12 @@ export class VendorAgingComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(()=>{                           
-      this.info = 'No sales Order Details Found For This Customer ID!';
+      this.info = 'No Payment&Aging Details Found For This Customer ID!';
  }, 4000);
-    if (localStorage.getItem("id") === null) {
+    if (localStorage.getItem("vid") === null) {
       this.router.navigate(['']);
     }
-    this.user_id= localStorage.getItem('id')!;
+    this.user_id= localStorage.getItem('vid')!;
     this.url1=('http://localhost:3200/vendor/aging');
     this.http.get(this.url1).subscribe((auth) =>
     {

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="left">
+    <nav class="navbar navbar-default navbar-fixed-side">
+      <img [src]='logo' height="48px">
+      <ul class="nav flex-column">
+        <li routerLinkActive="active"><a routerLink="/employee/profile"><mat-icon>perm_identity</mat-icon>Profile</a></li>
+        <li routerLinkActive="active"><a routerLink="/employee/leave"><mat-icon>request_page</mat-icon>Leave Data</a></li>
+        <li routerLinkActive="active"><a routerLink="/employee/payslip"><mat-icon>attach_money</mat-icon>Pay Slip</a></li>
+        <li><a (click)='logout()'><mat-icon>power_settings_new</mat-icon></a></li>
+      </ul>
+    </nav>
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>

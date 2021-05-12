@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 @Component({
   selector: 'app-vendor-purchase-order',
   templateUrl: './vendor-purchase-order.component.html',
@@ -18,23 +20,23 @@ export class VendorPurchaseOrderComponent implements OnInit {
   rdata:any=[];
   dataSource:any=[];
   display:boolean=true;
+  paginator: MatPaginator;
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
-    setTimeout(()=>{                           
-      this.info = 'No Purchase Order Items Found For This Customer ID!';
- }, 4000);
-    if (localStorage.getItem("id") === null) {
+    
+    if (localStorage.getItem("vid") === null) {
       this.router.navigate(['']);
     }
-    this.user_id= localStorage.getItem('id')!;
+    this.user_id= localStorage.getItem('vid')!;
     this.url1=('http://localhost:3200/vendor/po?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {
       console.log(auth);
       this.rdata.push(auth);
       console.log(this.rdata[0]);
-      this.dataSource=this.rdata[0];
+      this.dataSource=new MatTableDataSource(this.rdata[0]);
+      this.dataSource.paginator = this.paginator;
       this.display=!this.display;
       if(this.rdata[0]==null)
       {

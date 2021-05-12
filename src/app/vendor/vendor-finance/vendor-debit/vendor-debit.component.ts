@@ -22,12 +22,12 @@ export class VendorDebitComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(()=>{                           
-      this.info = 'No Credit Memo Found For This Customer ID!';
+      this.info = 'No Debit Memo Found For This Customer ID!';
  }, 4000);
-    if (localStorage.getItem("id") === null) {
+    if (localStorage.getItem("vid") === null) {
       this.router.navigate(['']);
     }
-    this.user_id= localStorage.getItem('id')!;
+    this.user_id= localStorage.getItem('vid')!;
     this.url1=('http://localhost:3200/vendor/debit?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {

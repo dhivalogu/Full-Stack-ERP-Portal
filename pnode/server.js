@@ -37,6 +37,20 @@ const vgoods = require("./routes/vendor/goods");
 app.use("/vendor/goods", vgoods);
 const vpo = require("./routes/vendor/po"); 
 app.use("/vendor/po", vpo);
+const elogin = require("./routes/employee/login"); 
+app.use("/employee/login", elogin);
+const edetails = require("./routes/employee/details"); 
+app.use("/employee/details", edetails);
+const eupdate = require("./routes/employee/update"); 
+app.use("/employee/update", eupdate);
+const eleavedata = require("./routes/employee/leavedata"); 
+app.use("/employee/leavedata", eleavedata);
+const eleaveapply = require("./routes/employee/applyleave"); 
+app.use("/employee/applyleave", eleaveapply);
+const payslip = require("./routes/employee/payslip"); 
+app.use("/employee/payslip", payslip);
+const leavebal = require("./routes/employee/leavebal"); 
+app.use("/employee/leavebal", leavebal);
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })	
