@@ -14,6 +14,13 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.navigate(['employee/profile']);
+    let s= document.createElement('script');
+    s.setAttribute('src','https://cdn.cai.tools.sap/webchat/webchat.js');
+    s.setAttribute('channelId','388c351e-0243-41bd-97ab-a7e74a8c7a8c');
+    s.setAttribute('token','327318039f62336f729cd7cda6b2bec6');
+    s.setAttribute('id','cai-webchat');
+    document.body.appendChild(s);
+
   }
   
   logout():void

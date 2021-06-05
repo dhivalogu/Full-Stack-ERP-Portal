@@ -13,8 +13,9 @@ const password = 'abap@123'
 router.post('/', async (req, res) => {
 
     const user_id=req.body.user_id;
-    const password=req.body.password
-
+    const pass=req.body.pass;
+    console.log(user_id);
+    console.log(pass);
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
     <soapenv:Header/>
     <soapenv:Body>
@@ -22,7 +23,7 @@ router.post('/', async (req, res) => {
           <BANK>
           </BANK>
           <ID>${user_id}</ID>
-          <PASSWORD>${password}</PASSWORD>
+          <PASSWORD>${pass}</PASSWORD>
        </urn:ZBAPI_VENDORAUTH_DL>
     </soapenv:Body>
  </soapenv:Envelope>`

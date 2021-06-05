@@ -51,6 +51,12 @@ const payslip = require("./routes/employee/payslip");
 app.use("/employee/payslip", payslip);
 const leavebal = require("./routes/employee/leavebal"); 
 app.use("/employee/leavebal", leavebal);
+const vupdate = require("./routes/vendor/update"); 
+app.use("/vendor/update", vupdate);
+const vpoc = require("./routes/vendor/newpo"); 
+app.use("/vendor/newpo", vpoc);
+const mlogin = require("./routes/maintenance/login"); 
+app.use("/maintenance/login", elogin);
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })	

@@ -42,9 +42,10 @@ import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/empl
 import {NgxPrintModule} from 'ngx-print';
 import { EmployeeLeaveComponent } from './employee/employee-leavedata/employee-leave/employee-leave.component';
 import { EmployeeLeaveBalanceComponent } from './employee/employee-leavedata/employee-leave-balance/employee-leave-balance.component';
+import { VendorPoCreateComponent } from './vendor/vendor-purchase-order/vendor-po-create/vendor-po-create.component';
 @NgModule({
   declarations: [
-    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent, VendorLoginComponent, VendorComponent, VendorRfqComponent, VendorPurchaseOrderComponent, VendorGoodsReceiptComponent, VendorFinanceComponent, VendorCreditComponent, VendorDebitComponent, VendorInvoiceComponent, VendorProfileComponent, VendorAgingComponent, LandingPageComponent, EmployeeComponent, EmployeeProfileComponent, EmployeeLeavedataComponent, EmployeePayslipComponent, EmployeeLoginComponent, EmployeeLeavecreateComponent, EmployeeLeaveComponent, EmployeeLeaveBalanceComponent
+    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent, VendorLoginComponent, VendorComponent, VendorRfqComponent, VendorPurchaseOrderComponent, VendorGoodsReceiptComponent, VendorFinanceComponent, VendorCreditComponent, VendorDebitComponent, VendorInvoiceComponent, VendorProfileComponent, VendorAgingComponent, LandingPageComponent, EmployeeComponent, EmployeeProfileComponent, EmployeeLeavedataComponent, EmployeePayslipComponent, EmployeeLoginComponent, EmployeeLeavecreateComponent, EmployeeLeaveComponent, EmployeeLeaveBalanceComponent, VendorPoCreateComponent
   ],
   imports: [
     BrowserModule,

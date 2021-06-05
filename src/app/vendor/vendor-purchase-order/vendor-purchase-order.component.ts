@@ -45,5 +45,9 @@ export class VendorPurchaseOrderComponent implements OnInit {
       }
     });   
   }
+  go():void
+  {
+    this.router.navigate(['vendor/create-po']);
+  }
 
 }

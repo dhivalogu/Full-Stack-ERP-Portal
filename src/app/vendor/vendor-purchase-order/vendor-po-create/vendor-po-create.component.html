@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="centre">
+        <div class="cen">
+            <h1>Create Purchase Order</h1>
+            <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Document Date</mat-label>
+            <input matInput [(ngModel)]="DOC_DATE">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Company Code</mat-label>
+            <input matInput [(ngModel)]="COMPANY_CODE" >
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>Purchase Organization</mat-label>
+            <input matInput [(ngModel)]="PURCHASE_ORG" >
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>Purchase Group</mat-label>
+            <input matInput [(ngModel)]="PURCHASE_GRP" >
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>Delivery Date</mat-label>
+            <input matInput [(ngModel)]="DELIVERY_DATE" >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Location</mat-label>
+            <input matInput [(ngModel)]="LOCATION" >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Material</mat-label>
+            <input matInput [(ngModel)]="MATERIAL" >
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <input matInput [(ngModel)]="SHORT_TEXT" >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Quantity</mat-label>
+            <input matInput [(ngModel)]="QUANTITY" >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Plant</mat-label>
+            <input matInput [(ngModel)]="PLANT" >
+        </mat-form-field>
+        
+        <button  (click)='update()' class="btn" style="background-color: rgb(58, 173, 110);">Apply</button>
+        
+        <p style="color: rgb(58, 173, 110);">{{this.info}}</p>
+    </div>
+</div>
+</div>

@@ -6,13 +6,15 @@ router.use(bodyparser.urlencoded())
 const fetch = require('node-fetch')
 const base64 = require('base-64')
 const xml2js = require('xml2js')
+const { CONSOLE_APPENDER } = require('karma/lib/constants')
 const parser = xml2js.Parser()
 const username = 'abaper'
 const password = 'abap@123'
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
 
-    const user_id=req.query.user_id;
+    const user_id="SA100200";
+    console.log(user_id);
 
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
     <soapenv:Header/>

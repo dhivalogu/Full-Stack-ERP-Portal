@@ -33,6 +33,7 @@ import { EmployeeLoginComponent } from './employee/employee-login/employee-login
 import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/employee-leavecreate/employee-leavecreate.component';
 import { EmployeeLeaveComponent } from './employee/employee-leavedata/employee-leave/employee-leave.component';
 import { EmployeeLeaveBalanceComponent } from './employee/employee-leavedata/employee-leave-balance/employee-leave-balance.component';
+import { VendorPoCreateComponent } from './vendor/vendor-purchase-order/vendor-po-create/vendor-po-create.component';
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'clogin', component: CustomerLoginComponent },
@@ -56,6 +57,7 @@ const routes: Routes = [
     {path: 'profile', component: VendorProfileComponent},
     {path: 'quotation', component: VendorRfqComponent},
     {path: 'purchaseorder', component: VendorPurchaseOrderComponent},
+    {path: 'create-po', component: VendorPoCreateComponent},
     {path: 'goods', component: VendorGoodsReceiptComponent},
     {path: 'finance', component: VendorFinanceComponent,children :[
       {path: 'debit', component: VendorDebitComponent},

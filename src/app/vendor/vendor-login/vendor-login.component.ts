@@ -38,7 +38,7 @@ export class VendorLoginComponent implements OnInit {
       }
       else
       {
-        this.error='User not exists'
+        this.error='Enter valid username & password'
       }
     });
    
