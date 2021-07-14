@@ -1,0 +1,50 @@
+<div *ngIf="display"class="spin">
+    <app-spinner1></app-spinner1>
+    <p>{{this.info}}</p>
+</div>
+<div *ngIf="!display" id="divName" >
+<div class="container">
+    <div class="centre">
+        <div class="cen" id="cen">
+        <h2>Full And Final Settlement</h2>
+        <br><br><br>
+        <p><b>Customer ID</b> : {{this.user_id}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Name </b>: {{this.fname}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Cost Center </b> {{this.ccenter}}</p>
+          <p> <b>Organization </b>: {{this.org}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+
+        </p>
+        
+        <p><b>Joined Date </b>: {{this.join}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>End Date </b>: {{this.end}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Notice Period </b>: 1 Month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <p><b>Tenure </b>: {{this.tenure}} </p>
+        <br><br><br>
+        <table>
+            <tr>
+              <th>S.No</th>
+              <th>Type</th>
+              <th>Amount</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>EOS Amount</td>
+              <td>{{this.final_amount}}</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Allowances</td>
+              <td>{{this.deduction}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><b>Total Amount</b></td>
+              <td>{{this.netpay}}</td>
+            </tr>
+            
+          </table>
+        <br><br><br>
+        <button  class="printbtn" [useExistingCss]="true" [printStyle]="{button : {'display': 'none'},img : {'height': '100px'}}"printSectionId="cen" ngxPrint><div class="icon"><mat-icon [inline]="true">print</mat-icon></div></button>
+        
+    </div>
+</div>
+</div>
+</div>

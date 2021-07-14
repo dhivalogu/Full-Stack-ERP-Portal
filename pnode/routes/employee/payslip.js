@@ -13,15 +13,15 @@ const password = 'Tech@2021'
 router.get('/', async (req, res) => {
 
     const user_id=req.query.user_id;
-    const pass=req.query.password
-
+    const seq=req.query.seq;
+    
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
     <soapenv:Header/>
     <soapenv:Body>
        <urn:ZBAPI_EMPPAYSLIPHTML_DL>
           <!--You may enter the following 3 items in any order-->
           <ID>${user_id}</ID>
-          <SEQ>1</SEQ>
+          <SEQ>${seq}</SEQ>
           <IT_PAYSLIP_HTML>
              <!--Zero or more repetitions:-->
             
@@ -30,6 +30,7 @@ router.get('/', async (req, res) => {
     </soapenv:Body>
  </soapenv:Envelope>`
 
+ console.log(ReqObj);
  const response= await fetch("http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&senderService=BC_PAYSLIP_DL&receiverParty=&receiverService=&interface=SI_PAYSLIP_DL&interfaceNamespace=http://dhiva.com/employee",
    {
 

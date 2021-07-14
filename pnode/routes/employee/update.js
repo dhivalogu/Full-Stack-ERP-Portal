@@ -27,6 +27,7 @@ router.get('/', async (req, res) => {
     const city=req.query.city
     const street=req.query.street
     const mobile=req.query.mobile
+    const fullname= fname +' '+lname
 
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
     <soapenv:Header/>
@@ -38,14 +39,14 @@ router.get('/', async (req, res) => {
           <DOB>${dob}</DOB>
           <ID>${user_id}</ID>
           <LNAME>${lname}</LNAME>
-          <NAME>${fname}</NAME>
+          <NAME>${fullname}</NAME>
           <PHONE_NUMBER>${mobile}</PHONE_NUMBER>
           <POSTAL_CODE>${postal}</POSTAL_CODE>
           <STREET>${street}</STREET>
        </urn:ZBAPI_EMPDETAILS_EDIT_DL>
     </soapenv:Body>
  </soapenv:Envelope>`
-
+   console.log(ReqObj);
    // Sending Response to the PIPO system
    const response= await fetch("http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&senderService=BC_EMPEDIT_DL&receiverParty=&receiverService=&interface=SI_EMPEDIT_DL&interfaceNamespace=http://dhiva.com/employee",
    {

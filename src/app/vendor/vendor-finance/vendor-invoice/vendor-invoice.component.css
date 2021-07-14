@@ -1,0 +1,20 @@
+h2
+{
+    padding-left: 40vw;
+    padding-bottom: 20px;
+}
+button
+{
+    margin-left: 80vw;
+}
+[_nghost-kuj-c150] .textLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: .2;
+    line-height: 1;
+    box-shadow: 0 4px 8px 0 #121212, 0 6px 20px 0 #121212;
+}

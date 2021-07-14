@@ -38,24 +38,33 @@ import { EmployeeProfileComponent } from './employee/employee-profile/employee-p
 import { EmployeeLeavedataComponent } from './employee/employee-leavedata/employee-leavedata.component';
 import { EmployeePayslipComponent } from './employee/employee-payslip/employee-payslip.component';
 import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
-import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/employee-leavecreate/employee-leavecreate.component';
+import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/employee-leave/employee-leavecreate/employee-leavecreate.component';
 import {NgxPrintModule} from 'ngx-print';
 import { EmployeeLeaveComponent } from './employee/employee-leavedata/employee-leave/employee-leave.component';
 import { EmployeeLeaveBalanceComponent } from './employee/employee-leavedata/employee-leave-balance/employee-leave-balance.component';
 import { VendorPoCreateComponent } from './vendor/vendor-purchase-order/vendor-po-create/vendor-po-create.component';
+import { EmployeeFnfComponent } from './employee/employee-fnf/employee-fnf.component';
+import { EmployeeNoticeComponent } from './employee/employee-fnf/employee-notice/employee-notice.component';
+import { EmployeeDashboardComponent } from './employee/employee-dashboard/employee-dashboard.component';
+import { EmployeePayrollComponent } from './employee/employee-payroll/employee-payroll.component';
+import { pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { VendorInvlistComponent } from './vendor-invlist/vendor-invlist.component';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 @NgModule({
   declarations: [
-    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent, VendorLoginComponent, VendorComponent, VendorRfqComponent, VendorPurchaseOrderComponent, VendorGoodsReceiptComponent, VendorFinanceComponent, VendorCreditComponent, VendorDebitComponent, VendorInvoiceComponent, VendorProfileComponent, VendorAgingComponent, LandingPageComponent, EmployeeComponent, EmployeeProfileComponent, EmployeeLeavedataComponent, EmployeePayslipComponent, EmployeeLoginComponent, EmployeeLeavecreateComponent, EmployeeLeaveComponent, EmployeeLeaveBalanceComponent, VendorPoCreateComponent
+    AppComponent,CustomerComponent,CustomerLoginComponent,CustomerDeliveryComponent,CustomerInquiryComponent,CustomerFinanceComponent,CustomerProfileComponent,CustomerSalesComponent,CustomerDebitComponent,CustomerCreditComponent,CustomerUploadComponent, CustomerInvoiceComponent, CustomerSalesDataComponent, Spinner1Component, CustomerAgingComponent, VendorLoginComponent, VendorComponent, VendorRfqComponent, VendorPurchaseOrderComponent, VendorGoodsReceiptComponent, VendorFinanceComponent, VendorCreditComponent, VendorDebitComponent, VendorInvoiceComponent, VendorProfileComponent, VendorAgingComponent, LandingPageComponent, EmployeeComponent, EmployeeProfileComponent, EmployeeLeavedataComponent, EmployeePayslipComponent, EmployeeLoginComponent, EmployeeLeavecreateComponent, EmployeeLeaveComponent, EmployeeLeaveBalanceComponent, VendorPoCreateComponent, EmployeeFnfComponent, EmployeeNoticeComponent, EmployeeDashboardComponent, EmployeePayrollComponent, VendorInvlistComponent, CustomerDashboardComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule,HttpClientModule,NgxPaginationModule,NgxPrintModule
+    ReactiveFormsModule,HttpClientModule,NgxPaginationModule,NgxPrintModule,PdfViewerModule,NgxExtendedPdfViewerModule
   ],
-  providers: [],
+  providers: [NgxExtendedPdfViewerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

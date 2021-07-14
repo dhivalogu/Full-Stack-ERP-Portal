@@ -1,41 +1,549 @@
+<div *ngIf="display"class="spin">
+    <app-spinner1></app-spinner1>
+    <p>{{this.info}}</p>
+</div>
+
+<div *ngIf="!display" id="divName" >
 <div class="container">
     <div class="centre">
+        <div class="left">
+            <div class="cen">
+                
+            <img class="bgimg" [src] ="logo" >
+            </div>
+        </div>
+        <div class="right">
         <div class="cen">
         <mat-form-field appearance="fill">
             <mat-label>Customer ID</mat-label>
-            <input matInput [(ngModel)]="user_id" disabled>
+            <input matInput [(ngModel)]="user_id" readonly>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>First Name</mat-label>
-            <input matInput [(ngModel)]="fname" [disabled]='!editable'>
-        </mat-form-field>
+            <input matInput [(ngModel)]="fname" [readonly]='!editable'>
+        </mat-form-field>&nbsp;&nbsp;
         <mat-form-field appearance="fill">
             <mat-label>Last Name</mat-label>
-            <input matInput [(ngModel)]="lname" [disabled]='!editable'>
+            <input matInput [(ngModel)]="lname" [readonly]='!editable'>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>Country</mat-label>
-            <input matInput [(ngModel)]="country" [disabled]='!editable'>
-        </mat-form-field>
+            <select matNativeControl required [(ngModel)]="country" [disabled]='!editable'>
+                <option value="AD">Andorran</option>
+
+<option value="AE">United Arab Emirates.</option>
+
+<option value="AF">Afghanistan</option>
+
+<option value="AG">Antigua/Barbuda</option>
+
+<option value="AI">Anguilla</option>
+
+<option value="AL">Albania</option>
+
+<option value="AM">Armenia</option>
+
+<option value="AN">Dutch</option>
+
+<option value="AO">Antilles</option>
+
+<option value="AQ">Angola</option>
+
+<option value="AR">Antarctica</option>
+
+<option value="AS">Argentina</option>
+
+<option value="AT">Samoa,America</option>
+
+<option value="AU">Austria</option>
+
+<option value="AW">Australia</option>
+
+<option value="AZ">Aruba</option>
+
+<option value="BA">Azerbaijan</option>
+
+<option value="BB">Bosnia-Herz.</option>
+
+<option value="BD">Barbados</option>
+
+<option value="BE">Bangladesh</option>
+
+<option value="BF">Belgium</option>
+
+<option value="BG">Burkina Faso</option>
+
+<option value="BH">Bulgaria</option>
+
+<option value="BI">Bahrain</option>
+
+<option value="BJ">Burundi</option>
+
+<option value="BL">Benin</option>
+
+<option value="BM">Blue</option>
+
+<option value="BN">Bermuda</option>
+
+<option value="BO">Brunei Daruss</option>
+
+<option value="BR">Bolivia</option>
+
+<option value="BS">Brazil</option>
+
+<option value="BT">Bahamas</option>
+
+<option value="BV">Bhutan</option>
+
+<option value="BW">Bouvet Islands</option>
+
+<option value="BY">Botswana</option>
+
+<option value="BZ">Belarus</option>
+
+<option value="CA">Belize</option>
+
+<option value="CC">Canada</option>
+
+<option value="CD">Coconut Islands</option>
+
+<option value="CF">Dem Rep Congo</option>
+
+<option value="CG">CAR</option>
+
+<option value="CH">Rep of Congo</option>
+
+<option value="CI">Switzerland</option>
+
+<option value="CK">Cote d'Ivoire</option>
+
+<option value="CL">Cook Islands</option>
+
+<option value="CM">Chile</option>
+
+<option value="CN">Cameroon</option>
+
+<option value="CO">China</option>
+
+<option value="CR">Colombia</option>
+
+<option value="CS">Costa Rica</option>
+
+<option value="CU">Serbia/Monten.</option>
+
+<option value="CV">Cuba</option>
+
+<option value="CX">Cape Verde</option>
+
+<option value="CY">Christmas Islnd</option>
+
+<option value="CZ">Cyprus</option>
+
+<option value="DE">Czech</option>
+
+<option value="DJ">Republic Germany</option>
+
+<option value="DK">Djibouti</option>
+
+<option value="DM">Denmark</option>
+
+<option value="DO">Dominica</option>
+
+<option value="DZ">Dominican Rep.</option>
+
+<option value="EC">Algeria</option>
+
+<option value="EE">Ecuador</option>
+
+<option value="EG">Estonia</option>
+
+<option value="EH">Egypt</option>
+
+<option value="ER">West Sahara</option>
+
+<option value="ES">Eritrea</option>
+
+<option value="ET">Spain</option>
+
+<option value="EU">Ethiopia</option>
+
+<option value="FI">European Union</option>
+
+<option value="FJ">Finland</option>
+
+<option value="FK">Fiji</option>
+
+<option value="FM">Falkland Islnds</option>
+
+<option value="FO">Micronesia</option>
+
+<option value="FR">Faroe Islands</option>
+
+<option value="GA">France</option>
+
+<option value="GB">Gabon</option>
+
+<option value="GD">United Kingdom</option>
+
+<option value="GE">Grenada</option>
+
+<option value="GF">Georgia</option>
+
+<option value="GH">French Guayana</option>
+
+<option value="GI">Ghana</option>
+
+<option value="GL">Gibraltar</option>
+
+<option value="GM">Greenland</option>
+
+<option value="GN">Gambia</option>
+
+<option value="GP">Guinea</option>
+
+<option value="GQ">Guadeloupe</option>
+
+<option value="GR">Equatorial Guin</option>
+
+<option value="GS">Greece</option>
+
+<option value="GT">S Sandwich Ins</option>
+
+<option value="GU">Guatemala</option>
+
+<option value="GW">Guam</option>
+
+<option value="GY">Guinea-Bissau</option>
+
+<option value="HK">Guyana</option>
+
+<option value="HM">Hong Kong</option>
+
+<option value="HN">Heard/McDon.Isl</option>
+
+<option value="HR">Honduras</option>
+
+<option value="HT">Croatia</option>
+
+<option value="HU">Haiti</option>
+
+<option value="ID">Hungary</option>
+
+<option value="IN">India</option>
+
+<option value="IE">Indonesia</option>
+
+<option value="IL">Ireland</option>
+
+<option value="IN">Israel</option>
+
+<option value="IO">Brit.Ind.Oc.Ter</option>
+
+<option value="IQ">Iraq</option>
+
+<option value="IR">Iran</option>
+
+<option value="IS">Iceland</option>
+
+<option value="IT">Italy</option>
+
+<option value="JM">Jamaica</option>
+
+<option value="JO">Jordan</option>
+
+<option value="JP">Japan</option>
+
+<option value="KE">Kenya</option>
+
+<option value="KG">Kyrgyzstan</option>
+
+<option value="KH">Cambodia</option>
+
+<option value="KI">Kiribati</option>
+
+<option value="KM">Comoros</option>
+
+<option value="KN">St Kitts&Nevis</option>
+
+<option value="KP">North Korea</option>
+
+<option value="KR">South Korea</option>
+
+<option value="KW">Kuwait</option>
+
+<option value="KY">Cayman Islands</option>
+
+<option value="KZ">Kazakhstan</option>
+
+<option value="LA">Laos</option>
+
+<option value="LB">Lebanon</option>
+
+<option value="LC">St. Lucia</option>
+
+<option value="LI">Liechtenstein</option>
+
+<option value="LK">Sri Lanka</option>
+
+<option value="LR">Liberia</option>
+
+<option value="LS">Lesotho</option>
+
+<option value="LT">Lithuania</option>
+
+<option value="LU">Luxembourg</option>
+
+<option value="LV">Latvia</option>
+
+<option value="LY">Libya</option>
+
+<option value="MA">Morocco</option>
+
+<option value="MC">Monaco</option>
+
+<option value="MD">Moldova</option>
+
+<option value="MG">Madagascar</option>
+
+<option value="MH">Marshall Islnds</option>
+
+<option value="MK">Macedonia</option>
+
+<option value="ML">Mali</option>
+
+<option value="MM">Burma</option>
+
+<option value="MN">Mongolia</option>
+
+<option value="MO">Macau</option>
+
+<option value="MP">N.Mariana Islnd</option>
+
+<option value="MQ">Martinique</option>
+
+<option value="MR">Mauretania</option>
+
+<option value="MS">Montserrat</option>
+
+<option value="MT">Malta</option>
+
+<option value="MU">Mauritius</option>
+
+<option value="MV">Maldives</option>
+
+<option value="MW">Malawi</option>
+
+<option value="MX">Mexico</option>
+
+<option value="MY">Malaysia</option>
+
+<option value="MZ">Mozambique</option>
+
+<option value="NA">Namibia</option>
+
+<option value="NC">New Caledonia</option>
+
+<option value="NE">Niger</option>
+
+<option value="NF">Norfolk Islands</option>
+
+<option value="NG">Nigeria</option>
+
+<option value="NI">Nicaragua</option>
+
+<option value="NL">Netherlands</option>
+
+<option value="NO">Norway</option>
+
+<option value="NP">Nepal</option>
+
+<option value="NR">Nauru</option>
+
+<option value="NT">NATO</option>
+
+<option value="NU">Niue</option>
+
+<option value="NZ">New Zealand</option>
+
+<option value="OM">Oman</option>
+
+<option value="OR">Orange</option>
+
+<option value="PA">Panama</option>
+
+<option value="PE">Peru</option>
+
+<option value="PF">Frenc.Polynesia</option>
+
+<option value="PG">Papua New Guinea</option>
+
+<option value="PH">Philippines</option>
+
+<option value="PK">Pakistan</option>
+
+<option value="PL">Poland</option>
+
+<option value="PM">St.Pier,Miquel.</option>
+
+<option value="PN">Pitcairn Islnds</option>
+
+<option value="PR">Puerto Rico</option>
+
+<option value="PS">Palestine</option>
+
+<option value="PT">Portugal</option>
+
+<option value="PW">Palau</option>
+
+<option value="PY">Paraguay</option>
+
+<option value="QA">Qatar</option>
+
+<option value="RE">Reunion</option>
+
+<option value="RO">Romania</option>
+
+<option value="RU">Russian Fed.</option>
+
+<option value="RW">Rwanda</option>
+
+<option value="SA">Saudi Arabia</option>
+
+<option value="SB">Solomon Islands</option>
+
+<option value="SC">Seychelles</option>
+
+<option value="SD">Sudan</option>
+
+<option value="SE">Sweden</option>
+
+<option value="SG">Singapore</option>
+
+<option value="SH">Saint Helena</option>
+
+<option value="SI">Slovenia</option>
+
+<option value="SJ">Svalbard</option>
+
+<option value="SK">Slovakia</option>
+
+<option value="SL">Sierra Leone</option>
+
+<option value="SM">San Marino</option>
+
+<option value="SN">Senegal</option>
+
+<option value="SO">Somalia</option>
+
+<option value="SR">Suriname</option>
+
+<option value="ST">S.Tome,Principe</option>
+
+<option value="SV">El Salvador</option>
+
+<option value="SY">Syria</option>
+
+<option value="SZ">Swaziland</option>
+
+<option value="TC">Turksh Caicosin</option>
+
+<option value="TD">Chad</option>
+
+<option value="TF">French S.Territ</option>
+
+<option value="TG">Togo</option>
+
+<option value="TH">Thailand</option>
+
+<option value="TJ">Tajikistan</option>
+
+<option value="TK">Tokelau Islands</option>
+
+<option value="TL">East Timor</option>
+
+<option value="TM">Turkmenistan</option>
+
+<option value="TN">Tunisia</option>
+
+<option value="TO">Tonga</option>
+
+<option value="TP">East Timor</option>
+
+<option value="TR">Turkey</option>
+
+<option value="TT">Trinidad,Tobago</option>
+
+<option value="TV">Tuvalu</option>
+
+<option value="TW">Taiwan</option>
+
+<option value="TZ">Tanzania</option>
+
+<option value="UA">Ukraine</option>
+
+<option value="UG">Uganda</option>
+
+<option value="UM">Minor Outl.Isl.</option>
+
+<option value="UN">United Nations</option>
+
+<option value="US">USA</option>
+
+<option value="UY">Uruguay</option>
+
+<option value="UZ">Uzbekistan</option>
+
+<option value="VA">Vatican City</option>
+
+<option value="VC">St. Vincent</option>
+
+<option value="VE">Venezuela</option>
+
+<option value="VG">Brit.Virgin Is.</option>
+
+<option value="VI">Amer.Virgin Is.</option>
+
+<option value="VN">Vietnam</option>
+
+<option value="VU">Vanuatu</option>
+
+<option value="WF">Wallis,Futuna</option>
+
+<option value="WS">Samoa</option>
+
+<option value="YE">Yemen</option>
+
+<option value="YT">Mayotte</option>
+
+<option value="ZA">South Africa</option>
+
+<option value="ZM">Zambia</option>
+
+<option value="ZW">Zimbabwe</option>
+              </select>
+        </mat-form-field>&nbsp;&nbsp;
+        
         <mat-form-field appearance="fill">
             <mat-label>Date Of Birth</mat-label>
-            <input matInput [(ngModel)]="dob" [disabled]='!editable'>
+            <input  matInput [(ngModel)]="date1" [matDatepicker]="dp" placeholder="Date Of Birth" [disabled]='!editable'>
+          <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+          <mat-datepicker #dp></mat-datepicker>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>City</mat-label>
-            <input matInput [(ngModel)]="city" [disabled]='!editable'>
-        </mat-form-field>
+            <input matInput [(ngModel)]="city" [readonly]='!editable'>
+        </mat-form-field>&nbsp;&nbsp;
         <mat-form-field appearance="fill">
             <mat-label>Postal Code</mat-label>
-            <input matInput [(ngModel)]="postal" [disabled]='!editable'>
+            <input matInput [(ngModel)]="postal" [readonly]='!editable'>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>Street</mat-label>
-            <input matInput [(ngModel)]="street" [disabled]='!editable'>
-        </mat-form-field>
+            <input matInput [(ngModel)]="street" [readonly]='!editable'>
+        </mat-form-field>&nbsp;&nbsp;
         <mat-form-field appearance="fill">
             <mat-label>Mobile</mat-label>
-            <input matInput [(ngModel)]="mobile" [disabled]='!editable'>
+            <input matInput [(ngModel)]="mobile" [readonly]='!editable'>
         </mat-form-field><br>
         
         <div *ngIf="!editable">
@@ -46,5 +554,7 @@
         </div><br>
         <p style="color: rgb(58, 173, 110);">{{this.info}}</p>
     </div>
+    </div>
+</div>
 </div>
 </div>

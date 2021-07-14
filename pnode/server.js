@@ -53,10 +53,41 @@ const leavebal = require("./routes/employee/leavebal");
 app.use("/employee/leavebal", leavebal);
 const vupdate = require("./routes/vendor/update"); 
 app.use("/vendor/update", vupdate);
+const vinvoicelist = require("./routes/vendor/invoicelist"); 
+app.use("/vendor/invoicelist", vinvoicelist);
+const vinvoice = require("./routes/vendor/invoice"); 
+app.use("/vendor/invoice", vinvoice);
 const vpoc = require("./routes/vendor/newpo"); 
 app.use("/vendor/newpo", vpoc);
 const mlogin = require("./routes/maintenance/login"); 
 app.use("/maintenance/login", elogin);
+const efnf = require("./routes/employee/fnf"); 
+app.use("/employee/fnf", efnf);
+const epayroll = require("./routes/employee/payroll"); 
+app.use("/employee/payroll", epayroll);
+const ecn = require("./routes/employee/checknotice"); 
+app.use("/employee/cn", ecn);
+const enotice = require("./routes/employee/notice"); 
+app.use("/employee/notice", enotice);
+const mnotifylist = require("./routes/maintenance/notification_list"); 
+app.use("/maintenance/nlist", mnotifylist);
+const morderlist = require("./routes/maintenance/order_list1"); 
+app.use("/maintenance/olist", morderlist);
+const mnview = require("./routes/maintenance/notification_detail"); 
+app.use("/maintenance/nview", mnview);
+const morderdisplay = require("./routes/maintenance/order_display"); 
+app.use("/maintenance/odetail", morderdisplay);
+const mnotifcreate = require("./routes/maintenance/notification_create"); 
+app.use("/maintenance/ncreate", mnotifcreate);
+const mordercreate = require("./routes/maintenance/order_create"); 
+app.use("/maintenance/ocreate", mordercreate);
+const morderedit = require("./routes/maintenance/order_edit"); 
+app.use("/maintenance/oedit", morderedit);
+const mnotifedit = require("./routes/maintenance/notif_edit"); 
+app.use("/maintenance/nedit", mnotifedit);
+const fcm = require("./routes/maintenance/fcm"); 
+app.use("/maintenance/fcm", fcm);
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })	

@@ -1,0 +1,45 @@
+<div *ngIf="display"class="spin">
+    <app-spinner1></app-spinner1>
+    <p>{{this.info}}</p>
+</div>
+<div *ngIf="!display" id="divName" class="tab">
+    <h2>Invoice List</h2>
+    <button  printSectionId="divName" ngxPrint><mat-icon>print</mat-icon></button>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="INV_DOC_NO">
+          <th mat-header-cell *matHeaderCellDef> Invoice No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.INV_DOC_NO}} </td>
+        </ng-container>
+        <ng-container matColumnDef="FISC_YEAR">
+            <th mat-header-cell *matHeaderCellDef> Fiscal Year</th>
+            <td mat-cell *matCellDef="let element"> {{element.FISC_YEAR}} </td>
+        </ng-container>
+        <ng-container matColumnDef="DOC_DATE">
+            <th mat-header-cell *matHeaderCellDef>Date</th>
+            <td mat-cell *matCellDef="let element"> {{element.DOC_DATE}} </td>
+        </ng-container>
+        <ng-container matColumnDef="GROSS_AMNT">
+            <th mat-header-cell *matHeaderCellDef>Gross Amount</th>
+            <td mat-cell *matCellDef="let element"> {{element.GROSS_AMNT}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="CURRENCY">
+            <th mat-header-cell *matHeaderCellDef>Currency</th>
+            <td mat-cell *matCellDef="let element"> {{element.CURRENCY}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="actions">
+            <mat-header-cell  *matHeaderCellDef ></mat-header-cell>
+            <mat-cell *matCellDef="let row" >
+                 <button mat-button  >View</button>
+            </mat-cell>
+          </ng-container>
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;let i = index" (click)="logIndex(i)"></tr>
+      </table>
+      
+      
+</div>

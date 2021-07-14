@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./customer-profile.component.css']
 })
 export class CustomerProfileComponent implements OnInit {
-  logo:string='assets/images/logo.jpg';
+  logo:string='assets/images/profile1.png';
   user_id:string='';
   password:string='';
   url1:string='';
@@ -68,4 +68,6 @@ export class CustomerProfileComponent implements OnInit {
     this.info="Updated Successfully";
     this.editable=false;
   }
+
+  
 }

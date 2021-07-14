@@ -8,8 +8,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCardModule} from '@angular/material/card';
+import {MatSortModule} from '@angular/material/sort';
 const MaterialComponents = [
-  MatButtonModule,MatFormFieldModule,MatInputModule,MatSidenavModule,MatListModule,MatIconModule,MatTableModule,MatCarouselModule,MatPaginatorModule
+  MatButtonModule,MatFormFieldModule,MatInputModule,MatSidenavModule,MatListModule,MatIconModule,MatTableModule,MatCarouselModule,MatPaginatorModule,MatDatepickerModule,MatCardModule,MatSortModule
 ];
 @NgModule({
   imports: [MaterialComponents],

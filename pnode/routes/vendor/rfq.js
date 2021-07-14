@@ -11,9 +11,9 @@ const parser = xml2js.Parser()
 const username = 'abaper'
 const password = 'abap@123'
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
 
-    const user_id="SA100200";
+    const user_id=req.query.user_id;
     console.log(user_id);
 
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
@@ -29,6 +29,8 @@ router.post('/', async (req, res) => {
        </urn:ZBAPI_RFQ_GETDETAIL_DL>
     </soapenv:Body>
  </soapenv:Envelope>`
+ 
+ console.log(ReqObj);
 
    const response= await fetch("http://SOLMAN.kaartech.com:8000/sap/bc/srt/rfc/sap/zbapi_rfq_getdetail_dl/100/zbapi_rfq_getdetail_dl/zbapi_rfq_getdetail_dl",
    {

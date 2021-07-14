@@ -22,18 +22,16 @@ router.get('/', async (req, res) => {
     const start_date=req.query.START_DATE;
     const end_date=req.query.LAST_DATE;
     const type=req.query.LEAVE_TYPE;
-    const hours=req.query.HOURS;
       console.log(start_date);
       console.log(end_date);
       console.log(type);
-      console.log(hours);
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
     <soapenv:Header/>
     <soapenv:Body>
        <urn:ZBAPI_EMPLEAVECREATE_DL>
           <!--You may enter the following 5 items in any order-->
           <END_DATE>${end_date}</END_DATE>
-          <HOURS>${hours}</HOURS>
+          <HOURS></HOURS>
           <ID>${user_id}</ID>
           <LEAVE_TYPE>${type}</LEAVE_TYPE>
           <START_DATE>${start_date}</START_DATE>

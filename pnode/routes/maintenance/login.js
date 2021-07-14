@@ -7,27 +7,28 @@ const fetch = require('node-fetch')
 const base64 = require('base-64')
 const xml2js = require('xml2js')
 const parser = xml2js.Parser()
-const username = 'abaper'
-const password = 'abap@123'
-
+const username = 'POUSER'
+const password = 'Tech@2021'
 router.post('/', async (req, res) => {
 
     const user_id=req.body.user_id;
-    const password=req.body.password
-
+    const pass=req.body.pass;
+    console.log(user_id);
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
     <soapenv:Header/>
     <soapenv:Body>
-       <urn:ZBAPI_VENDORAUTH_DL>
-          <BANK>
-          </BANK>
+       <urn:ZBAPI_EMPDETAILS_DL>
+          <!--You may enter the following 3 items in any order-->
           <ID>${user_id}</ID>
-          <PASSWORD>${password}</PASSWORD>
-       </urn:ZBAPI_VENDORAUTH_DL>
+          <PASSWORD>${pass}</PASSWORD>
+          <IT_FINAL>
+            
+          </IT_FINAL>
+       </urn:ZBAPI_EMPDETAILS_DL>
     </soapenv:Body>
  </soapenv:Envelope>`
 
-   const response= await fetch("http://SOLMAN.kaartech.com:8000/sap/bc/srt/rfc/sap/zbapi_vendorauth_dl/100/zbapi_vendorauth_dl/zbapi_vendorauth_dl",
+ const response= await fetch("http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&senderService=BC_EMPLOYEEDETAILS_DL&receiverParty=&receiverService=&interface=SI_EMPDETAILS_DL&interfaceNamespace=http://dhiva.com/employee",
    {
 
       method: "POST",
@@ -44,13 +45,12 @@ router.post('/', async (req, res) => {
 
    }).then(res=> res.text());
 
-   webservice_data =parser.parseString(response, (err,data) => {
-         res_data = data['soap-env:Envelope']['soap-env:Body'][0]['n0:ZBAPI_VENDORAUTH_DLResponse'][0]['FLAG'][0];
+   data =parser.parseString(response, (err,data) => {
+         res_data = data['SOAP:Envelope']['SOAP:Body'][0]['ns0:ZBAPI_EMPDETAILS_DL.Response'][0]['FLAG'][0];
          console.log(res_data)
          res.send(res_data);
          
     })
-    
 
 })
 

@@ -1,0 +1,80 @@
+
+<div class="container">
+    <div class="centre">
+        <div class="cen">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Profile</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink = "/employee/profile">
+                    <img  [src]="profile">
+                </mat-card-content>
+                <mat-card-actions>
+                  <div *ngIf="!display2">
+                    
+                    <p class="large_p">{{this.info3}}</p>
+                </div>
+                <div *ngIf="display2">
+                  <app-spinner1 class="sk"></app-spinner1>
+              </div>
+                  
+                </mat-card-actions>
+              </mat-card>
+
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Leave Data</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink="/employee/leave">
+                    <img  [src]="leave">
+                </mat-card-content>
+                <mat-card-actions>
+                  <div *ngIf="!display">
+                    <p class="small_p">{{this.info}}</p>
+                    <span>Leave Requests</span>
+                </div>
+                <div *ngIf="display">
+                  <app-spinner1 class="sk"></app-spinner1>
+              </div>
+                </mat-card-actions>
+              </mat-card>
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Payslip</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink="/employee/payroll">
+                    <img  [src]="payslip">
+                </mat-card-content>
+                <mat-card-actions>
+                  
+                  <button mat-button>View</button>
+                </mat-card-actions>
+              </mat-card>
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>FnF</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink="/employee/noticeperiod">
+                    <img  [src]="fnf">
+                </mat-card-content>
+                <mat-card-actions>
+                  <div *ngIf="!display1">
+                    <p class="big_p">{{this.info1}}</p>
+                    <span style="margin-left: 25px;">{{this.info2}}</span>
+                </div>
+                <div *ngIf="display1">
+                  <app-spinner1 class="sk"></app-spinner1>
+              </div>
+                  
+                </mat-card-actions>
+              </mat-card>
+        
+        
+    </div>
+</div>
+</div>
+

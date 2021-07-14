@@ -13,7 +13,7 @@ export class EmployeeComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-    this.router.navigate(['employee/profile']);
+    this.router.navigate(['employee/dashboard']);
     let s= document.createElement('script');
     s.setAttribute('src','https://cdn.cai.tools.sap/webchat/webchat.js');
     s.setAttribute('channelId','388c351e-0243-41bd-97ab-a7e74a8c7a8c');

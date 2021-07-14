@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
        </urn:ZBAPI_EMPDETAILS_DL>
     </soapenv:Body>
  </soapenv:Envelope>`
-
+console.log(ReqObj)
  const response= await fetch("http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&senderService=BC_EMPLOYEEDETAILS_DL&receiverParty=&receiverService=&interface=SI_EMPDETAILS_DL&interfaceNamespace=http://dhiva.com/employee",
    {
 

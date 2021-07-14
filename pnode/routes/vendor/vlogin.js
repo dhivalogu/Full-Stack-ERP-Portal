@@ -13,7 +13,7 @@ const password = 'abap@123'
 router.post('/', async (req, res) => {
 
     const user_id=req.body.user_id;
-    const pass=req.body.pass;
+    const pass=req.body.password;
     console.log(user_id);
     console.log(pass);
     const ReqObj = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
        </urn:ZBAPI_VENDORAUTH_DL>
     </soapenv:Body>
  </soapenv:Envelope>`
-
+console.log(ReqObj);
    const response= await fetch("http://SOLMAN.kaartech.com:8000/sap/bc/srt/rfc/sap/zbapi_vendorauth_dl/100/zbapi_vendorauth_dl/zbapi_vendorauth_dl",
    {
 

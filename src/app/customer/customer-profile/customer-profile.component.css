@@ -28,14 +28,14 @@
   }
 .left {
 
-    width: 40vw;
+    width: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-left: 30px;
   }
 .right {
-    width: 60vw;
+    width: 70vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,3 +58,10 @@
       transform: scale(1.1);
 
   }
+  .mat-input-element:disabled, .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
+    color: #000;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-label {
+  color: rgb(0, 0, 0);
+}

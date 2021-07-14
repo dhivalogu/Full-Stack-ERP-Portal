@@ -18,6 +18,7 @@ export class EmployeePayslipComponent implements OnInit {
   auth1:string='';
   html:string='';
   rdata:any=[];
+  seq:string='1';
   display:boolean=true;
   constructor(private router:Router,private http:HttpClient) { }
 
@@ -29,13 +30,16 @@ export class EmployeePayslipComponent implements OnInit {
       this.router.navigate(['']);
     }
     this.user_id= localStorage.getItem('eid')!;
-    this.url1=('http://localhost:3200/employee/payslip?user_id='+this.user_id);
+    this.seq=localStorage.getItem('eseq')!
+    this.url1=('http://localhost:3200/employee/payslip?user_id='+this.user_id+'&seq='+this.seq);
     this.http.get(this.url1).subscribe((auth) =>
     {
       this.rdata.push(auth);
       console.log(this.rdata[0]);
       for(var i=1;i<this.rdata[0].length;i++)
       {
+        console.log(this.rdata[0][i].LINE[0]);
+        console.log(i);
       this.html=this.html+this.rdata[0][i].LINE[0];
      }
      console.log(this.html);
@@ -44,6 +48,9 @@ export class EmployeePayslipComponent implements OnInit {
   }
   printPage() {
     window.print();
+  }
+  reload() {
+    console.log(this.seq);
   }
 
 }

@@ -3,9 +3,11 @@
     <nav class="navbar navbar-default navbar-fixed-side">
       <img [src]='logo' height="48px">
       <ul class="nav flex-column">
+        <li routerLinkActive="active"><a routerLink="/employee/dashboard"><mat-icon>dashboard</mat-icon></a></li>
         <li routerLinkActive="active"><a routerLink="/employee/profile"><mat-icon>perm_identity</mat-icon>Profile</a></li>
-        <li routerLinkActive="active"><a routerLink="/employee/leave"><mat-icon>request_page</mat-icon>Leave Data</a></li>
-        <li routerLinkActive="active"><a routerLink="/employee/payslip"><mat-icon>attach_money</mat-icon>Pay Slip</a></li>
+        <li routerLinkActive="active"><a routerLink="/employee/leave"><mat-icon>question_answer</mat-icon>Leave Data</a></li>
+        <li routerLinkActive="active"><a routerLink="/employee/payroll"><mat-icon>attach_money</mat-icon>Pay Slip</a></li>
+        <li routerLinkActive="active"><a routerLink="/employee/noticeperiod"><mat-icon>request_page</mat-icon>FnF</a></li>
         <li><a (click)='logout()'><mat-icon>power_settings_new</mat-icon></a></li>
       </ul>
     </nav>

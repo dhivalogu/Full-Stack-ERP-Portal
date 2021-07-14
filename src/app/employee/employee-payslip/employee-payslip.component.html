@@ -4,7 +4,12 @@
 </div>
 <div *ngIf="!display" id="divName" >
     <img class="bgimg" [src] ="logo" >
-    <button  class="printbtn" [printStyle]="{button : {'display': 'none'},img : {'height': '100px'}}"printSectionId="divName" ngxPrint><mat-icon>print</mat-icon></button>
+    <select matNativeControl required [(ngModel)]="seq" (ngModelChange)="reload()">
+        <option [ngValue]="1">January</option>
+        <option [ngValue]="2">Annual Leave</option>
+      </select>
+    <button  class="printbtn"  [printStyle]="{button : {'display': 'none'},img : {'height': '100px'}}"printSectionId="divName" ngxPrint><mat-icon>print</mat-icon></button>
+   
     <div [innerHTML]="html">
 
     </div>

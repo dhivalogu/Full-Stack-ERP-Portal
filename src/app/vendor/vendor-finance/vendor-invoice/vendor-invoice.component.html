@@ -1,1 +1,7 @@
-<p>vendor-invoice works!</p>
+
+    <h2>View/Download Invoice</h2><button   (click)="download()"><mat-icon>print</mat-icon></button>
+    <div id="divName" >
+        <pdf-viewer [src]="src"
+        [zoom]="1"
+        ></pdf-viewer>
+    </div>

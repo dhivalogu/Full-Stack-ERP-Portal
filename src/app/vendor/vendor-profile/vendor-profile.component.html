@@ -3,39 +3,39 @@
         <div class="cen">
         <mat-form-field appearance="fill">
             <mat-label>Customer ID</mat-label>
-            <input matInput [(ngModel)]="user_id" disabled>
+            <input matInput [(ngModel)]="user_id" readonly>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>First Name</mat-label>
-            <input matInput [(ngModel)]="fname" [disabled]='!editable'>
+            <input matInput [(ngModel)]="fname" [readonly]='!editable'>
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Last Name</mat-label>
-            <input matInput [(ngModel)]="lname" [disabled]='!editable'>
+            <input matInput [(ngModel)]="lname" [readonly]='!editable'>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>Country</mat-label>
-            <input matInput [(ngModel)]="country" [disabled]='!editable'>
+            <input matInput [(ngModel)]="country" [readonly]='!editable'>
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Region</mat-label>
-            <input matInput [(ngModel)]="region" [disabled]='!editable'>
+            <input matInput [(ngModel)]="region" [readonly]='!editable'>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>City</mat-label>
-            <input matInput [(ngModel)]="city" [disabled]='!editable'>
+            <input matInput [(ngModel)]="city" [readonly]='!editable'>
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Postal Code</mat-label>
-            <input matInput [(ngModel)]="postal" [disabled]='!editable'>
+            <input matInput [(ngModel)]="postal" [readonly]='!editable'>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
             <mat-label>Street</mat-label>
-            <input matInput [(ngModel)]="street" [disabled]='!editable'>
+            <input matInput [(ngModel)]="street" [readonly]='!editable'>
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Mobile</mat-label>
-            <input matInput [(ngModel)]="mobile" [disabled]='!editable'>
+            <input matInput [(ngModel)]="mobile" [readonly]='!editable'>
         </mat-form-field><br>
         
         <div *ngIf="!editable">

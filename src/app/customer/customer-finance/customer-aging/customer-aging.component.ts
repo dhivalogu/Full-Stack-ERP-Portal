@@ -22,7 +22,7 @@ export class CustomerAgingComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(()=>{                           
-      this.info = 'No sales Order Details Found For This Customer ID!';
+      this.info = 'No Aging & Payment Details Found For This Customer ID!';
  }, 4000);
     if (localStorage.getItem("cid") === null) {
       this.router.navigate(['']);

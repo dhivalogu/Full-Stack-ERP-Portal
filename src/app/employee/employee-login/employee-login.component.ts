@@ -28,7 +28,7 @@ export class EmployeeLoginComponent implements OnInit {
   {
     this.url1=('http://localhost:3200/employee/login/');
     localStorage.setItem("eid", this.user_id);
-    this.http.post(this.url1,{user_id:this.user_id,password:this.password}).subscribe((auth) =>
+    this.http.post(this.url1,{user_id:this.user_id,pass:this.password}).subscribe((auth) =>
     {
       console.log(auth);
       if(auth=='1')

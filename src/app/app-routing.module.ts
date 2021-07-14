@@ -30,14 +30,21 @@ import { EmployeeProfileComponent } from './employee/employee-profile/employee-p
 import { EmployeeLeavedataComponent } from './employee/employee-leavedata/employee-leavedata.component';
 import { EmployeePayslipComponent } from './employee/employee-payslip/employee-payslip.component';
 import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
-import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/employee-leavecreate/employee-leavecreate.component';
+import { EmployeeLeavecreateComponent } from './employee/employee-leavedata/employee-leave/employee-leavecreate/employee-leavecreate.component';
 import { EmployeeLeaveComponent } from './employee/employee-leavedata/employee-leave/employee-leave.component';
 import { EmployeeLeaveBalanceComponent } from './employee/employee-leavedata/employee-leave-balance/employee-leave-balance.component';
 import { VendorPoCreateComponent } from './vendor/vendor-purchase-order/vendor-po-create/vendor-po-create.component';
+import { EmployeeFnfComponent } from './employee/employee-fnf/employee-fnf.component';
+import { EmployeeNoticeComponent } from './employee/employee-fnf/employee-notice/employee-notice.component';
+import { EmployeeDashboardComponent } from './employee/employee-dashboard/employee-dashboard.component';
+import { EmployeePayrollComponent } from './employee/employee-payroll/employee-payroll.component';
+import { VendorInvlistComponent } from './vendor-invlist/vendor-invlist.component';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'clogin', component: CustomerLoginComponent },
   { path: 'customer', component: CustomerComponent ,children :[
+      {path: 'dashboard', component: CustomerDashboardComponent},
       {path: 'profile', component: CustomerProfileComponent},
       {path: 'inquiry', component: CustomerInquiryComponent},
       {path: 'sales', component: CustomerSalesComponent},
@@ -64,6 +71,7 @@ const routes: Routes = [
       {path: 'credit', component: VendorCreditComponent},
       {path: 'aging', component: VendorAgingComponent},
       {path: 'invoice', component: VendorInvoiceComponent},
+      {path: 'invoicelist', component: VendorInvlistComponent},
     ]}
 
 ]},
@@ -77,7 +85,11 @@ const routes: Routes = [
   
   ]},
     {path: 'applyleave', component: EmployeeLeavecreateComponent},
-    {path: 'payslip', component: EmployeePayslipComponent}
+    {path: 'dashboard', component: EmployeeDashboardComponent},
+    {path: 'payroll', component: EmployeePayrollComponent},
+    {path: 'payslip', component: EmployeePayslipComponent},
+    {path: 'FnF', component: EmployeeFnfComponent},
+    {path: 'noticeperiod', component: EmployeeNoticeComponent}
 
 ] },
 
