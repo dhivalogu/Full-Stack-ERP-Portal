@@ -32,7 +32,7 @@ export class VendorInvoiceComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(()=>{                           
-      this.info = 'No Credit Memo Found For This Customer ID!';
+      this.info = 'No Invoice Found For This Customer ID!';
  }, 4000);
     if (localStorage.getItem("vid") === null) {
       this.router.navigate(['']);

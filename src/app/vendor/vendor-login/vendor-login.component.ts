@@ -27,13 +27,13 @@ export class VendorLoginComponent implements OnInit {
   signin():void
   {
     this.url1=('http://localhost:3200/vendor/login/');
-    localStorage.setItem("vid", this.user_id);
     this.http.post(this.url1,{user_id:this.user_id,password:this.password}).subscribe((auth) =>
     {
       console.log(auth);
       if(auth=='1')
       {
         this.router.navigate(['vendor']);
+        localStorage.setItem("vid", this.user_id);
         this.error='User exists'
       }
       else

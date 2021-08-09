@@ -41,7 +41,7 @@ export class VendorPurchaseOrderComponent implements OnInit {
       if(this.rdata[0]==null)
       {
         this.display=!this.display;
-        this.info = 'No Quotation Details Found For This Customer ID!';
+        this.info = 'No Purchase Found For This Customer ID!';
       }
     });   
   }

@@ -46,7 +46,7 @@ router.get('/', async (req, res) => {
        </urn:ZBAPI_PO_CREATE_DL>
     </soapenv:Body>
  </soapenv:Envelope>`
-
+   console.log(ReqObj);
    const response= await fetch("http://SOLMAN.kaartech.com:8000/sap/bc/srt/rfc/sap/zbapi_po_create_dl/100/zbapi_po_create_dl/zbapi_po_create_dl",
    {
 

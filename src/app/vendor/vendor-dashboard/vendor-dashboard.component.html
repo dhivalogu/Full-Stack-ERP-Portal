@@ -1,0 +1,85 @@
+
+<div class="container">
+    <div class="centre">
+        <div class="cen">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Profile</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink = "/vendor/profile">
+                    <img  [src]="profile">
+                </mat-card-content>
+                <mat-card-actions>
+                  <div *ngIf="!display2">
+                    
+                    <p class="large_p">{{this.info}}</p>
+                </div>
+                <div *ngIf="display2">
+                  <app-spinner1 class="sk"></app-spinner1>
+              </div>
+                  
+                </mat-card-actions>
+              </mat-card>
+
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>RFQ</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink="/vendor/quotation">
+                    <img  [src]="leave">
+                </mat-card-content>
+                <mat-card-actions>
+                  <div *ngIf="!display">
+                    <p class="small_p">{{this.info1}}</p>
+                    <span>{{this.info2}}</span>
+                </div>
+                <div *ngIf="display">
+                  <app-spinner1 class="sk"></app-spinner1>
+              </div>
+                </mat-card-actions>
+              </mat-card>
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Purchase Order</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink="/vendor/purchaseorder">
+                    <img  [src]="payslip">
+                </mat-card-content>
+                <mat-card-actions>
+                    <div *ngIf="!display3">
+                        <p class="big_p">{{this.info3}}</p>
+                        <span>{{this.info4}}</span>
+                    </div>
+                    <div *ngIf="display3">
+                      <app-spinner1 class="sk"></app-spinner1>
+                  </div>
+                </mat-card-actions>
+              </mat-card>
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Good Receipt</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content routerLink="/vendor/goods">
+                    <img  [src]="fnf">
+                </mat-card-content>
+                <mat-card-actions>
+                  <div *ngIf="!display1">
+                    <p class="small_p">{{this.info5}}</p>
+                    <span style="margin-left: 25px;">{{this.info6}}</span>
+                </div>
+                <div *ngIf="display1">
+                  <app-spinner1 class="sk"></app-spinner1>
+              </div>
+                  
+                </mat-card-actions>
+              </mat-card>
+        
+        
+    </div>
+</div>
+</div>
+

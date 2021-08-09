@@ -3,6 +3,7 @@
     <p>{{this.info}}</p>
 </div>
 <div *ngIf="!display" id="divName" class="tab">
+    <h2>Credit Memo</h2>
     <button  class="printbtn" [useExistingCss]="true" [printStyle]="{button : {'display': 'none'},img : {'height': '100px'}}"printSectionId="divName" ngxPrint><mat-icon>print</mat-icon></button>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 

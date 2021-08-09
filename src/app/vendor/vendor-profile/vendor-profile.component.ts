@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./vendor-profile.component.css']
 })
 export class VendorProfileComponent implements OnInit {
-  logo:string='assets/images/logo.jpg';
+  logo:string='assets/images/profile1.png';
   user_id:string='';
   password:string='';
   url1:string='';

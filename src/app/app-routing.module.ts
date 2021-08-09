@@ -40,6 +40,7 @@ import { EmployeeDashboardComponent } from './employee/employee-dashboard/employ
 import { EmployeePayrollComponent } from './employee/employee-payroll/employee-payroll.component';
 import { VendorInvlistComponent } from './vendor-invlist/vendor-invlist.component';
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+import { VendorDashboardComponent } from './vendor/vendor-dashboard/vendor-dashboard.component';
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'clogin', component: CustomerLoginComponent },
@@ -61,6 +62,7 @@ const routes: Routes = [
   ] },
   { path: 'vlogin', component: VendorLoginComponent },
   { path: 'vendor', component: VendorComponent,children :[
+    {path: 'dashboard', component: VendorDashboardComponent},
     {path: 'profile', component: VendorProfileComponent},
     {path: 'quotation', component: VendorRfqComponent},
     {path: 'purchaseorder', component: VendorPurchaseOrderComponent},

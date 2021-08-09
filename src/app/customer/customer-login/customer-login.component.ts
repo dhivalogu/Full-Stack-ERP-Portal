@@ -27,7 +27,6 @@ export class CustomerLoginComponent implements OnInit {
   signin():void
   {
     this.url1=('http://localhost:3200/login?user_id='+this.user_id+'&password='+this.password);
-    localStorage.setItem("cid", this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {
       console.log(auth);
@@ -37,6 +36,7 @@ export class CustomerLoginComponent implements OnInit {
       console.log(this.auth1);
       if(this.auth1=='2')
       {
+        localStorage.setItem("cid", this.user_id);
         this.router.navigate(['customer']);
       }
       else if(auth=='1')

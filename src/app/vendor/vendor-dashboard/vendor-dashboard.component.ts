@@ -3,13 +3,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
-  selector: 'app-customer-dashboard',
-  templateUrl: './customer-dashboard.component.html',
-  styleUrls: ['./customer-dashboard.component.css']
+  selector: 'app-vendor-dashboard',
+  templateUrl: './vendor-dashboard.component.html',
+  styleUrls: ['./vendor-dashboard.component.css']
 })
-export class CustomerDashboardComponent implements OnInit {
+export class VendorDashboardComponent implements OnInit {
   logo:string='assets/images/logo.jpg';
   profile:string='assets/images/profile.png';
   leave:string='assets/images/inquiry.png';
@@ -37,41 +36,41 @@ export class CustomerDashboardComponent implements OnInit {
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem("cid") === null) {
+    if (localStorage.getItem("vid") === null) {
       this.router.navigate(['']);
     }
     setTimeout(()=>{ 
-    this.user_id= localStorage.getItem('cid')!;
-    this.url1=('http://localhost:3200/inquiry?user_id='+this.user_id);
+    this.user_id= localStorage.getItem('vid')!;
+    this.url1=('http://localhost:3200/vendor/rfq?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {
       this.rdata.push(auth);
       console.log(this.rdata[0]);
       this.info1=this.rdata[0].length;
       this.display=!this.display;
-      this.info2="Inquiry Data"
+      this.info2="Requests"
     });
   }, 400);
     setTimeout(()=>{ 
-      this.url1=('http://localhost:3200/salesorder?user_id='+this.user_id);
-      this.http.get(this.url1).subscribe((auth) =>
-      {
+      this.url1=('http://localhost:3200/vendor/po?user_id='+this.user_id);
+    this.http.get(this.url1).subscribe((auth) =>
+    {
       this.rdata1.push(auth);
       console.log(this.rdata1[0]);
       this.info3=this.rdata1[0].length;
-      this.info4="Sales Orders";
+      this.info4="Purchase Orders";
       this.display3=!this.display3;
     });
   }, 400);
     setTimeout(()=>{  
-      this.url1=('http://localhost:3200/login?user_id='+this.user_id);
-      this.http.get(this.url1).subscribe((auth) =>
-      {
+      this.url1=('http://localhost:3200/vendor/details');
+    this.http.post(this.url1,{user_id:this.user_id}).subscribe((auth) =>
+    {
 
       this.rdata3.push(auth);
       console.log(this.rdata);
       console.log(this.rdata3[0]);
-      var fname=this.rdata3[0].NAME1[0]+' '+this.rdata3[0].NAME2[0];
+      var fname=this.rdata3[0].NAME[0]+' '+this.rdata3[0].NAME_2[0];
       this.info=fname;;
       this.display2=!this.display2;
     });
@@ -80,14 +79,14 @@ export class CustomerDashboardComponent implements OnInit {
       
  }, 400);
  setTimeout(()=>{  
-  this.url1=('http://localhost:3200/delivery?user_id='+this.user_id);
+  this.url1=('http://localhost:3200/vendor/goods?user_id='+this.user_id);
     this.http.get(this.url1).subscribe((auth) =>
     {
   
   this.rdata2.push(auth);
   this.info5=this.rdata2[0].length;
   this.display1=!this.display1;
-  this.info6="Delivery Items";
+  this.info6="Receipts";
 });
 
 
@@ -99,10 +98,11 @@ setTimeout(()=>{
   console.log("Hi")           ;
   console.log(this.display);       
   if(this.display==true) 
-    {this.info2="No Inquiry Data Found";this.display=!this.display}
-  if(this.display3==true) {this.info4="No Sales Order Found";this.display3=!this.display3}
-  if(this.display1==true) {this.info6="No Delivery Items Found";this.display1=!this.display1}
+    {this.info2="No RFQ's Found";this.display=!this.display}
+  if(this.display3==true) {this.info4="No Purchase Order Found";this.display3=!this.display3}
+  if(this.display1==true) {this.info6="No Goods Receipt Found";this.display1=!this.display1}
 }, 5000);
     
   }
 }
+
